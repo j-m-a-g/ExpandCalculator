@@ -1,0 +1,15 @@
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator\bin\Debug\netstandard2.0\ExpandCalculator.deps.json
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator\bin\Debug\netstandard2.0\ExpandCalculator.dll
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator\bin\Debug\netstandard2.0\ref\ExpandCalculator.dll
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator\bin\Debug\netstandard2.0\ExpandCalculator.pdb
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.csproj.AssemblyReference.cache
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.AssemblyInfoInputs.cache
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.AssemblyInfo.cs
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.csproj.CoreCompileInputs.cache
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.dll
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\refint\ExpandCalculator.dll
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.pdb

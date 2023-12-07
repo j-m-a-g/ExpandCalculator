@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Name="ExpandCalcMain"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:material="clr-namespace:Plugin.MaterialDesignControls.Material3;assembly=Plugin.MaterialDesignControls"
+             xmlns:controls="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+             x:Class="ExpandCalculator.MainPage"
+             BackgroundColor="#0297df">
+
+    <StackLayout>
+        
+        <ScrollView x:Name="WelcomeScrollView"
+                 Padding="10, 100, 10, 0">
+
+            <StackLayout>
+                
+                <Image
+                        Source="Expand_Calculator_Icon.png"
+                        WidthRequest="60"
+                        HeightRequest="60"/>
+                    <material:MaterialLabel 
+                        Text="Welcome to Expand Calculator"
+                        FontSize="Title"
+                        HorizontalTextAlignment="Center"
+                        FontAttributes="Bold"
+                        TextColor="White"/>
+                    <material:MaterialLabel 
+                        Text="More than just your ordinary calculator..."
+                        FontSize="16"
+                        HorizontalTextAlignment="Center"
+                        FontAttributes="None"
+                        TextColor="White"/>
+
+                    <!--
+                Grid for displaying the calculator modes.
+                -->
+                <Grid x:Name="CalcModesGrid"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Margin="0, 0, 45, 0"
+                    RowSpacing="10">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="94"/>
+                        <ColumnDefinition Width="120"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!--Conversion calculator-->
+                    <ImageButton x:Name="ImageButton1"
+                         HorizontalOptions="End"
+                         Grid.Column="1"
+                         Grid.Row="1"
+                         Source="icons8_calculator_24.pmg"
+                         BackgroundColor="#27b1f1"
+                         CornerRadius="20"
+                         Padding="25"
+                         IsEnabled="False"
+                         Aspect="AspectFit"/>
+                    <material:MaterialLabel
+                        VerticalOptions="Center"
+                        FontSize="14.5"
+                        Grid.Column="2"
+                        Grid.Row="1"
+                        Text="Conversion Calculator"
+                        TextColor="White"/>
+                    <material:MaterialLabel
+                        Grid.Column="3"
+                        Grid.Row="1"
+                        VerticalOptions="Center"
+                        FontSize="14"
+                        Text="Converts two units of measure."
+                        TextColor="WhiteSmoke"/>
+
+                    <!--Area calculator-->
+                    <ImageButton x:Name="ImageButton2"
+                         HorizontalOptions="End"
+                         Grid.Row="2"
+                         Grid.Column="1"
+                         Padding="25"
+                         CornerRadius="20"
+                         BackgroundColor="#27b1f1"
+                         IsEnabled="False"
+                         Source="icons8_rhomboid_shape_24.png"/>
+                    <material:MaterialLabel
+                        Grid.Column="2"
+                        Grid.Row="2"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                        FontSize="14.5"
+                        Text="Area Calculator"/>
+                    <material:MaterialLabel
+                        Grid.Column="3"
+                        Grid.Row="2"
+                        VerticalOptions="Center"
+                        FontSize="14"
+                        TextColor="WhiteSmoke"
+                        Text="Calculates the area of a 2D shape using a measurement unit."/>
+
+                    <!--Volume calculator-->
+                    <ImageButton x:Name="ImageButton3"
+                         HorizontalOptions="End"
+                         Grid.Row="3"
+                         Grid.Column="1"
+                         Padding="25"
+                         CornerRadius="20"
+                         IsEnabled="False"
+                         Source="icons8_3d_model_24.png"
+                         BackgroundColor="#27b1f1"/>
+                    <material:MaterialLabel
+                        Grid.Column="2"
+                        Grid.Row="3"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                        FontSize="14.5"
+                        Text="Volume Calculator"/>
+                    <material:MaterialLabel
+                        Grid.Column="3"
+                        Grid.Row="3"
+                        VerticalOptions="Center"
+                        FontSize="14"
+                        TextColor="WhiteSmoke"
+                        Text="Calculates the volume of a 3D shape using a measurement unit."/>
+
+                    <!--Date calculator-->
+                    <ImageButton x:Name="ImageButton4"
+                         Grid.Column="1"
+                         Grid.Row="4"
+                         Source="icons8_date_24.png"
+                         Padding="25"
+                         HorizontalOptions="End"
+                         CornerRadius="20"
+                         IsEnabled="False"
+                         BackgroundColor="#27b1f1"/>
+                    <material:MaterialLabel
+                        Text="Date Calculator"
+                        TextColor="White"
+                        Grid.Column="2"
+                        Grid.Row="4"
+                        VerticalOptions="Center"/>
+                    <material:MaterialLabel
+                        Grid.Column="3"
+                        Grid.Row="4"
+                        VerticalOptions="Center"
+                        FontSize="14"
+                        TextColor="WhiteSmoke"
+                        Text="Calculates the difference between two dates."/>
+
+                </Grid>
+                
+            </StackLayout>
+            
+        </ScrollView>
+
+        <material:MaterialLabel x:Name="NavigationInstructionLabel"
+            Text="You can navigate through the navigation bar below."
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            TextColor="WhiteSmoke"
+            Margin="0, 20, 0, 0"/>
+
+
+        <!--SEPARATE PAGES FOR THE APP-->
+        
+        <!--Conversion calculator page-->
+        <ScrollView x:Name="ConversionCalculator"
+            IsVisible="False">
+            
+            <StackLayout>
+                
+                
+                
+            </StackLayout>
+            
+        </ScrollView>
+
+        <!--Area calculator page-->
+        <ScrollView x:Name="AreaCalculator"
+                     Padding="10, 100, 10, 10"
+                     IsVisible="False">
+
+            <StackLayout>
+                
+                <material:MaterialLabel
+                    Text="Area"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    FontSize="Title"
+                    FontAttributes="Bold"
+                    TextColor="White"/>
+                <material:MaterialPicker x:Name="AreaShapePicker"
+                     Margin="0, 25, 0, 0"
+                     Placeholder="Select a 2D Shape"
+                     BackgroundColor="#0173b7"
+                     FocusedBackgroundColor="#0173b7"
+                     PlaceholderColor="WhiteSmoke"
+                     BorderColor="WhiteSmoke"
+                     LabelTextColor="WhiteSmoke"
+                     AnimatePlaceholder="True"
+                     HasBorder="True"
+                     SelectedIndexChanged="AreaShapePicker_OnSelectedIndexChanged">
+                    
+                    <material:MaterialPicker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Square</x:String>
+                            <x:String>Rectangle</x:String>
+                            <x:String>Triangle</x:String>
+                            <x:String>Parallelogram</x:String>
+                            <x:String>Trapezoid</x:String>
+                            <x:String>Circle</x:String>
+                        </x:Array>
+                    </material:MaterialPicker.ItemsSource>
+                    
+                </material:MaterialPicker>
+                <material:MaterialChipsGroup x:Name="AreaUnitsChipsGroup"
+                    BackgroundColor="Transparent"
+                    BorderColor="#0173b7"
+                    CornerRadius="10"
+                    TextColor="White"
+                    SelectedBackgroundColor="#005395">
+                        
+                    <material:MaterialChipsGroup.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Yards (yd)</x:String>
+                            <x:String>Feet (ft)</x:String>
+                            <x:String>Inches (in)</x:String>
+                            <x:String>Kilometers (km)</x:String>
+                            <x:String>Meters (m)</x:String>
+                            <x:String>Centimeters (cm)</x:String>
+                            <x:String>Millimeters (mm)</x:String>
+                        </x:Array>
+                    </material:MaterialChipsGroup.ItemsSource>
+                        
+                </material:MaterialChipsGroup>
+                <material:MaterialLabel x:Name="AreaCalcBeginLabel"
+                    Margin="0, 100, 0, 0"
+                    TextColor="White"
+                    FontSize="Medium"
+                    Text="Select a 2D shape above to begin"
+                    HorizontalOptions="Center"/>
+                <material:MaterialLabel x:Name="AreaErrorLabel"
+                    IsVisible="False"
+                    TextColor="Red"
+                    Text="Please enter all the measurements and make sure you have selected a unit"/>
+
+                <!--Square, Rectangle and Parallelogram Area-->
+                <StackLayout x:Name="SquareAreaStackLayout"
+                     Margin="0, 5, 0, 0"
+                     IsVisible="False">
+                    
+                    <material:MaterialEntry x:Name="SquareFirstSideEntry"
+                        BackgroundColor="#4dbef3"
+                        Focused="SquareFirstSideEntry_OnFocused"
+                        FocusedBackgroundColor="#4dbef3"
+                        Placeholder="Length (l)"
+                        Keyboard="Numeric"
+                        Margin="0, 0, 0, 10"/>
+                    <material:MaterialEntry x:Name="SquareSecondSideEntry"
+                        BackgroundColor="#4dbef3"
+                        Focused="SquareSecondSideEntry_OnFocused"
+                        FocusedBackgroundColor="#4dbef3"
+                        Placeholder="Width (w)"
+                        Keyboard="Numeric"/>
+                    <material:MaterialButton x:Name="CalculateSquareAreaButton"
+                        BackgroundColor="#005395"
+                        Clicked="CalculateSquareAreaButton_OnClicked"
+                        Margin="0, 10, 0, 10"
+                        Text="Calculate"/>
+                    
+                </StackLayout>
+                
+                <!--Triangle Area-->
+                <StackLayout x:Name="TriangleAreaStackLayout"
+                     Margin="0, 5, 0, 0"
+                     IsVisible="False">
+                    
+                    <material:MaterialEntry x:Name="TriangleBaseEntry"
+                        FocusedBackgroundColor="#4dbef3"
+                        BackgroundColor="#4dbef3"
+                        Placeholder="Base (b)"
+                        Keyboard="Numeric"
+                        Focused="TriangleBaseEntry_OnFocused"
+                        Margin="0, 0, 0, 10"/>
+                    <material:MaterialEntry x:Name="TriangleHeightEntry"
+                        FocusedBackgroundColor="#4dbef3"
+                        BackgroundColor="#4dbef3"
+                        Placeholder="Height (h)"
+                        Focused="TriangleHeightEntry_OnFocused"
+                        Keyboard="Numeric"/>
+                    <material:MaterialButton x:Name="CalculateTriangleAreaButton"
+                        BackgroundColor="#005395"
+                        Clicked="CalculateTriangleAreaButton_OnClicked"
+                        Margin="0, 10, 0, 10"
+                        Text="Calculate"/>
+                    
+                </StackLayout>
+                
+                <!--Trapezoid Area-->
+                <StackLayout x:Name="TrapezoidStackLayout"
+                     Margin="0, 0, 0, 0"
+                     IsVisible="False">
+                    
+                    <material:MaterialEntry x:Name="TrapezoidFirstBaseEntry"
+                        FocusedBackgroundColor="#4dbef3"
+                        BackgroundColor="#4dbef3"
+                        Placeholder="Base (a)"
+                        Keyboard="Numeric"
+                        Focused="TrapezoidFirstBaseEntry_OnFocused"
+                        Margin="0, 0, 0, 0"/>
+                    <material:MaterialEntry x:Name="TrapezoidSecondBaseEntry"
+                        FocusedBackgroundColor="#4dbef3"
+                        BackgroundColor="#4dbef3"
+                        Placeholder="Base (b)"
+                        Keyboard="Numeric"
+                        Focused="TrapezoidSecondBaseEntry_OnFocused"
+                        Margin="0, 0, 0, 0"/>
+                    <material:MaterialEntry x:Name="TrapezoidHeightEntry"
+                        FocusedBackgroundColor="#4dbef3"
+                        BackgroundColor="#4dbef3"
+                        Placeholder="Height (h)"
+                        Focused="TrapezoidHeightEntry_OnFocused"
+                        Keyboard="Numeric"/>
+                    <material:MaterialButton x:Name="CalculateTrapezoidAreaButton"
+                         BackgroundColor="#005395"
+                         Margin="0, 10, 0, 10"
+                         Clicked="CalculateTrapezoidAreaButton_OnClicked"
+                         Text="Calculate"/>
+                    
+                </StackLayout>
+                
+                <!--Circle Area-->
+                <StackLayout x:Name="CircleStackLayout"
+                     Margin="0, 5, 0, 0"
+                     IsVisible="False">
+                    
+                    <controls:SegmentedControl x:Name="RadiusDiameterSegmentedControl"
+                        TintColor="#005395"
+                        SelectedTextColor="White"
+                        BackgroundColor="#4dbef3"
+                        Margin="0, 0, 0, 5">
+                        
+                        <controls:SegmentedControl.Children>
+                            <controls:SegmentedControlOption Text="Radius (r)"/>
+                            <controls:SegmentedControlOption Text="Diameter (d)"/>
+                        </controls:SegmentedControl.Children>
+                        
+                    </controls:SegmentedControl>
+                    <material:MaterialEntry x:Name="CircleRadiusDiameterEntry"
+                        FocusedBackgroundColor="#4dbef3"
+                        BackgroundColor="#4dbef3"
+                        Placeholder="Measurement"
+                        Focused="CircleRadiusDiameterEntry_OnFocused"
+                        Keyboard="Numeric"/>
+                    <material:MaterialButton x:Name="CalculateCircleAreaButton"
+                         BackgroundColor="#005395"
+                         Clicked="CalculateCircleAreaButton_OnClicked"
+                         Margin="0, 10, 0, 10"
+                         Text="Calculate"/>
+                    
+                    <Grid x:Name="CircleDiagramsGrid"
+                        Margin="90, 5, 0, 0"
+                        IsVisible="False">
+                        
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="100"/>
+                        </Grid.RowDefinitions>
+                        
+                        <!--Radius diagram-->
+                        <material:MaterialLabel
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            Text="Radius (r)"
+                            Grid.Row="0"
+                            Grid.Column="0"/>
+                        <Image
+                            Grid.Row="1"
+                            HeightRequest="100"
+                            WidthRequest="100"
+                            Grid.Column="0"
+                            Source="icons8_radius_96.png"/>
+                        
+                        <!--Diameter Diagram-->
+                        <material:MaterialLabel
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            Text="Diameter (d)"
+                            Grid.Row="0"
+                            Grid.Column="1"/>
+                        <Image
+                            Grid.Row="1"
+                            HeightRequest="100"
+                            WidthRequest="100"
+                            Grid.Column="1"
+                            Source="icons8_diameter_96.png"/>
+                        
+                    </Grid>
+                    
+                </StackLayout>
+                
+                <Image x:Name="AreaFirstImage"
+                   IsVisible="False"
+                   WidthRequest="100"
+                   HeightRequest="100"/>
+                <Image x:Name="AreaSecondImage"
+                   IsVisible="False"
+                   WidthRequest="100"
+                   HeightRequest="100"/>
+                <Image x:Name="AreaThirdImage"
+                   IsVisible="False"
+                   WidthRequest="100"
+                   HeightRequest="100"/>
+                <material:MaterialLabel x:Name="AreaResultLabel"
+                    BackgroundColor="#0283cb"
+                    IsVisible="False"
+                    FontSize="Medium"
+                    FontAttributes="Italic"
+                    TextColor="White"
+                    Padding="10"/>
+            
+            </StackLayout>
+            
+        </ScrollView>
+        
+        <!--Volume calculator page-->
+        <ScrollView x:Name="VolumeCalculator"
+            IsVisible="False">
+
+            <StackLayout>
+                
+                
+                
+            </StackLayout>
+
+        </ScrollView>
+        
+        <!--Date calculator page-->
+        <ScrollView x:Name="DateCalculator"
+            IsVisible="False">
+
+            <StackLayout>
+                
+                
+                
+            </StackLayout>
+            
+        </ScrollView>
+        
+        <!--About page-->
+        <ScrollView x:Name="AboutStackLayout"
+             Padding="75, 100, 75, 0"
+             IsVisible="False">
+            
+            <StackLayout>
+                
+                <Image
+                    Source="Expand_Calculator_Icon.png"
+                    WidthRequest="100"
+                    HeightRequest="100"
+                    Margin="0, 0, 0, 30"/>
+                <material:MaterialLabel
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    FontSize="Title"
+                    Text="About"/>
+                <material:MaterialLabel
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    TextColor="White"
+                    FontSize="16"
+                    Text="Created and Developed By: Joseph"/>
+                <material:MaterialLabel
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    TextColor="White"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    Text="Version 1.12.31"/>
+                <Image
+                    Source="icons8_feedback_24.png"
+                    WidthRequest="30"
+                    HeightRequest="30"/>
+                <material:MaterialLabel
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    TextColor="White"
+                    FontSize="16"
+                    Text="Feel free to provide any feedback on new features and report bugs."/>
+                <material:MaterialLabel
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    TextColor="White"
+                    FontSize="16"
+                    FontAttributes="Bold, Italic"
+                    Text="Note:"/>
+                <material:MaterialLabel
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    TextColor="White"
+                    FontAttributes="Italic"
+                    FontSize="16"
+                    Text="Please note that the app might not receive any new major updates right after the initial release of a new feature as the developer of the app may not be able to keep the demand of improving it since they actually have a life to attend to. Please be understanding."/>
+
+            </StackLayout>
+            
+        </ScrollView>
+        
+        <!--Settings page-->
+        <ScrollView x:Name="SettingsStackLayout"
+             Padding="75, 100, 75, 0"
+             IsVisible="False">
+            
+            <StackLayout>
+                
+                <material:MaterialLabel
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    FontSize="Title"
+                    Text="Settings"/>
+                
+                <Grid
+                    Margin="-100, 0, 0, 0">
+                    
+                    <Grid.ColumnDefinitions>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                    </Grid.RowDefinitions>
+                    
+                    <material:MaterialLabel
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        TextColor="White"
+                        FontSize="Medium"
+                        Text="Dark Mode"/>
+                    <Switch x:Name="DarkModeSwitch"
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Toggled="DarkModeSwitch_OnToggled"
+                        ThumbColor="#0173b7"
+                        OnColor="#005395"
+                        IsToggled="False"/>
+                    
+                </Grid>
+            
+            </StackLayout>
+            
+        </ScrollView>
+        
+        <!--
+        FlexLayout for the bottom navigation menu.
+        -->
+        <FlexLayout x:Name="NavigationFlexLayout"
+            VerticalOptions="EndAndExpand"
+            BackgroundColor="#0173b7"
+            HeightRequest="50"
+            Padding="10">
+
+            <ImageButton x:Name="HomeImageButton" 
+                Clicked="HomeImageButton_Clicked"
+                Source="icons8_home_24.png"
+                BackgroundColor="#005395"
+                Aspect="AspectFit"
+                Padding="10"
+                CornerRadius="10"
+                Margin="0, 0, 10, 0"/>
+            <ImageButton x:Name="ConversionCalcImageButton" 
+                Clicked="ConversionCalcImageButton_Clicked"
+                Source="icons8_calculator_24.png"
+                BackgroundColor="#0297df"
+                Aspect="AspectFit"
+                Padding="10"
+                CornerRadius="10"
+                Margin="0, 0, 10, 0"/>
+            <ImageButton x:Name="AreaCalcImageButton" 
+                Clicked="AreaCalcImageButton_Clicked"
+                Source="icons8_rhomboid_shape_24.png"
+                BackgroundColor="#0297df"
+                Aspect="AspectFit"
+                Padding="10"
+                CornerRadius="10"
+                Margin="0, 0, 10, 0"/>
+            <ImageButton x:Name="VolumeCalcImageButton" 
+                Clicked="VolumeCalcImageButton_Clicked"
+                Source="icons8_3d_model_24.png"
+                BackgroundColor="#0297df"
+                Aspect="AspectFit"
+                Padding="10"
+                CornerRadius="10"
+                Margin="0, 0, 10, 0"/>
+            <ImageButton x:Name="DateCalcImageButton" 
+                Clicked="DateCalcImageButton_Clicked"
+                Source="icons8_date_24.png"
+                BackgroundColor="#0297df"
+                Aspect="AspectFit"
+                Padding="10"
+                CornerRadius="10"
+                Margin="0, 0, 10, 0"/>
+            <ImageButton x:Name="AboutImageButton" 
+                Clicked="AboutImageButton_Clicked"
+                Source="icons8_about_24.png"
+                BackgroundColor="#0297df"
+                Aspect="AspectFit"
+                Padding="10"
+                CornerRadius="10"
+                Margin="0, 0, 10, 0"/>
+            <ImageButton x:Name="SettingsImageButton" 
+                Clicked="SettingsImageButton_Clicked"
+                Source="icons8_settings_24.png"
+                BackgroundColor="#0297df"
+                Aspect="AspectFit"
+                Padding="10"
+                CornerRadius="10"/>
+
+        </FlexLayout>
+        
+    </StackLayout>
+    
+</ContentPage>

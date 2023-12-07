@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "nrczPPQvBmCZ2eN2FgkKDUtYrvFFERHwYU4Gycjj/hKaxVvgxF+RtgQ3rJOzIHwmuB2wqffLQOKKPOxGluBlmQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Joseph\\ExpandCalculator\\ExpandCalculator\\ExpandCalculator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Joseph\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Joseph\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Joseph\\.nuget\\packages\\plugin.materialdesigncontrols\\3.1.0\\plugin.materialdesigncontrols.3.1.0.nupkg.sha512",
+    "C:\\Users\\Joseph\\.nuget\\packages\\segmentedcontrol.formsplugin\\2.0.1\\segmentedcontrol.formsplugin.2.0.1.nupkg.sha512",
+    "C:\\Users\\Joseph\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Joseph\\.nuget\\packages\\xamarin.essentials\\1.8.0\\xamarin.essentials.1.8.0.nupkg.sha512",
+    "C:\\Users\\Joseph\\.nuget\\packages\\xamarin.forms\\5.0.0.2622\\xamarin.forms.5.0.0.2622.nupkg.sha512"
+  ],
+  "logs": []
+}
