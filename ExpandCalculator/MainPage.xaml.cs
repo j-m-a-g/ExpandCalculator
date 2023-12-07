@@ -78,7 +78,7 @@ namespace ExpandCalculator
 				SquareFirstSideEntry.Placeholder = "Length (l)";
 				SquareSecondSideEntry.Placeholder = "Width (w)";
 				
-				ChangeAreaImages(AreaFirstImage, AreaSecondImage, "icons8_border_left_48.png", "icons8_border_bottom_48.png");
+				ChangeAreaImages(AreaFirstImage, AreaSecondImage, "icons8_border_left_96.png", "icons8_border_bottom_96.png");
 
 				SquareFirstSideEntry.Text = "";
 				SquareSecondSideEntry.Text = "";
@@ -573,7 +573,7 @@ namespace ExpandCalculator
 			}
 			else
 			{
-				DisableDarkMode("#0173b7", "#27b1f1", "");
+				DisableDarkMode("#005395", "#0173b7", "#27b1f1", "");
 			}
 		}
 		
@@ -712,17 +712,19 @@ namespace ExpandCalculator
 			CalculateSquareAreaButton.BackgroundColor = Color.FromHex(darkAccent2);
 		}
 		
-		private void DisableDarkMode(string lightAccent1, string lightAccent2, string lightAccent3)
+		private void DisableDarkMode(string lightAccent1, string lightAccent2, string lightAccent3, string lightAccent4)
 		{
 			ExpandCalcMain.BackgroundColor = Color.FromHex("#0297df");
 			
-			NavigationFlexLayout.BackgroundColor = Color.FromHex(lightAccent1);
-			AreaShapePicker.BackgroundColor = Color.FromHex(lightAccent1);
+			CalculateSquareAreaButton.BackgroundColor = Color.FromHex(lightAccent1);
 			
-			ImageButton1.BackgroundColor = Color.FromHex(lightAccent2);
-			ImageButton2.BackgroundColor = Color.FromHex(lightAccent2);
-			ImageButton3.BackgroundColor = Color.FromHex(lightAccent2);
-			ImageButton4.BackgroundColor = Color.FromHex(lightAccent2);
+			NavigationFlexLayout.BackgroundColor = Color.FromHex(lightAccent2);
+			AreaShapePicker.BackgroundColor = Color.FromHex(lightAccent2);
+			
+			ImageButton1.BackgroundColor = Color.FromHex(lightAccent3);
+			ImageButton2.BackgroundColor = Color.FromHex(lightAccent3);
+			ImageButton3.BackgroundColor = Color.FromHex(lightAccent3);
+			ImageButton4.BackgroundColor = Color.FromHex(lightAccent3);
 		}
 	}
 }

@@ -34,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
     <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <BundleAssemblies>false</BundleAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,6 +48,12 @@
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <BundleAssemblies>false</BundleAssemblies>
+    <AndroidLinkTool>r8</AndroidLinkTool>
+    <AndroidKeyStore>false</AndroidKeyStore>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -75,7 +85,26 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Expand_Calculator_Icon.png" />
+    <AndroidResource Include="Resources\drawable\icons8_about_96.png" />
+    <AndroidResource Include="Resources\drawable\icons8_border_bottom_96.png" />
+    <AndroidResource Include="Resources\drawable\icons8_border_left_96.png" />
+    <AndroidResource Include="Resources\drawable\icons8_calculator_96.png" />
+    <AndroidResource Include="Resources\drawable\icons8_cube_96.png" />
+    <AndroidResource Include="Resources\drawable\icons8_date_96.png" />
+    <AndroidResource Include="Resources\drawable\icons8_diameter_96.png" />
+    <AndroidResource Include="Resources\drawable\icons8_feedback_96.png" />
     <AndroidResource Include="Resources\drawable\icons8_home_384.png" />
+    <AndroidResource Include="Resources\drawable\icons8_radius_96.png" />
+    <AndroidResource Include="Resources\drawable\icons8_rhomboid_shape_96.png" />
+    <AndroidResource Include="Resources\drawable\icons8_settings_96.png" />
+    <AndroidResource Include="Resources\drawable\parallelogram_base_image.png" />
+    <AndroidResource Include="Resources\drawable\parallelogram_height_image.png" />
+    <AndroidResource Include="Resources\drawable\trapezoid_base_a_image.png" />
+    <AndroidResource Include="Resources\drawable\trapezoid_base_b_image.png" />
+    <AndroidResource Include="Resources\drawable\trapezoid_height.png" />
+    <AndroidResource Include="Resources\drawable\triangle_base_image.png" />
+    <AndroidResource Include="Resources\drawable\triangle_height_image.png" />
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
