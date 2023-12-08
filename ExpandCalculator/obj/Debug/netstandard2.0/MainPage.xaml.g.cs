@@ -134,10 +134,25 @@ namespace ExpandCalculator {
         private global::Plugin.MaterialDesignControls.Material3.MaterialDatePicker DateCalcFirstDatePicker;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Plugin.MaterialDesignControls.Material3.MaterialCheckbox FirstTimePickerCheckbox;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Plugin.MaterialDesignControls.Material3.MaterialTimePicker FirstDatePickerTime;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Plugin.MaterialDesignControls.Material3.MaterialDatePicker DateCalcSecondDatePicker;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Plugin.MaterialDesignControls.Material3.MaterialCheckbox SecondTimePickerCheckbox;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Plugin.MaterialDesignControls.Material3.MaterialTimePicker SecondDatePickerTime;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Plugin.MaterialDesignControls.Material3.MaterialButton DateCalcDifferenceButton;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Plugin.MaterialDesignControls.Material3.MaterialLabel DateResultLabel;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.ScrollView AboutStackLayout;
@@ -214,8 +229,13 @@ namespace ExpandCalculator {
             VolumeCalculator = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ScrollView>(this, "VolumeCalculator");
             DateCalculator = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ScrollView>(this, "DateCalculator");
             DateCalcFirstDatePicker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialDatePicker>(this, "DateCalcFirstDatePicker");
+            FirstTimePickerCheckbox = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialCheckbox>(this, "FirstTimePickerCheckbox");
+            FirstDatePickerTime = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialTimePicker>(this, "FirstDatePickerTime");
             DateCalcSecondDatePicker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialDatePicker>(this, "DateCalcSecondDatePicker");
+            SecondTimePickerCheckbox = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialCheckbox>(this, "SecondTimePickerCheckbox");
+            SecondDatePickerTime = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialTimePicker>(this, "SecondDatePickerTime");
             DateCalcDifferenceButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialButton>(this, "DateCalcDifferenceButton");
+            DateResultLabel = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialLabel>(this, "DateResultLabel");
             AboutStackLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ScrollView>(this, "AboutStackLayout");
             SettingsStackLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ScrollView>(this, "SettingsStackLayout");
             DarkModeSwitch = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Switch>(this, "DarkModeSwitch");

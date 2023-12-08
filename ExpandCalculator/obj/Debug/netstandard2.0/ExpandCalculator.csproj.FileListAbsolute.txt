@@ -14,3 +14,5 @@ C:\Users\Joseph\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\Expan
 C:\Users\Joseph\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\refint\ExpandCalculator.dll
 C:\Users\Joseph\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.pdb
 C:\Users\Joseph\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.sourcelink.json
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.Properties.Resources.resources
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.csproj.GenerateResource.cache

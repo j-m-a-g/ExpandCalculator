@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Plugin.MaterialDesignControls.Material3;
 using Xamarin.Forms;
 
 namespace ExpandCalculator
@@ -564,6 +565,137 @@ namespace ExpandCalculator
 			}
 		}
 		
+		// DateCalculator event handlers
+		private void DateCalcDifferenceButton_OnClicked(object sender, EventArgs e)
+		{
+			string dateFormat = "(days:hours:minutes:seconds)";
+			
+			// Checks whether the DateResultLabel
+			// is already visible or not to improve
+			// the overall performance - not needing
+			// to do an unnecessary calculation
+			switch (DateResultLabel.IsVisible)
+			{
+				case true:
+				{
+					break;
+				}
+				case false:
+				{
+					DateResultLabel.IsVisible = true;
+					break;
+				}
+				default:
+				{
+					DateResultLabel.IsVisible = true;
+					break;
+				}
+			}
+
+			if (FirstTimePickerCheckbox.IsChecked && SecondTimePickerCheckbox.IsChecked == false)
+			{
+				if ((DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time) > DateCalcSecondDatePicker.Date)
+				{
+					DateResultLabel.Text = 
+						$"The difference is: {(DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time) - DateCalcSecondDatePicker.Date} {dateFormat}";
+				}
+				else if ((DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time) < DateCalcSecondDatePicker.Date)
+				{
+					DateResultLabel.Text =
+						$"The difference is: {DateCalcSecondDatePicker.Date - (DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time)} {dateFormat}";
+				}
+				else if ((DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time) == DateCalcSecondDatePicker.Date)
+				{
+					DateResultLabel.Text = "There is no difference";
+				}
+			}
+			else if (SecondTimePickerCheckbox.IsChecked && FirstTimePickerCheckbox.IsChecked == false)
+			{
+				if (DateCalcFirstDatePicker.Date > (DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time))
+				{
+					DateResultLabel.Text = 
+						$"The difference is: {DateCalcFirstDatePicker.Date - (DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time)} {dateFormat}";
+				}
+				else if (DateCalcFirstDatePicker.Date < (DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time))
+				{
+					DateResultLabel.Text =
+						$"The difference is: {(DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time) - DateCalcFirstDatePicker.Date} {dateFormat}";
+				}
+				else if (DateCalcFirstDatePicker.Date == (DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time))
+				{
+					DateResultLabel.Text = "There is no difference";
+				}
+			}
+			else if (FirstTimePickerCheckbox.IsChecked && SecondTimePickerCheckbox.IsChecked)
+			{
+				if ((DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time) > (DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time))
+				{
+					DateResultLabel.Text = 
+						$"The difference is: {(DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time) - (DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time)} {dateFormat}";
+				}
+				else if ((DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time) < (DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time))
+				{
+					DateResultLabel.Text =
+						$"The difference is: {(DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time) - (DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time)} {dateFormat}";
+				}
+				else if ((DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time) == (DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time))
+				{
+					DateResultLabel.Text = "There is no difference";
+				}
+			}
+			else if (FirstTimePickerCheckbox.IsChecked == false && SecondTimePickerCheckbox.IsChecked == false)
+			{
+				if (DateCalcFirstDatePicker.Date  > DateCalcSecondDatePicker.Date)
+				{
+					DateResultLabel.Text = 
+						$"The difference is: {DateCalcFirstDatePicker.Date - DateCalcSecondDatePicker.Date} {dateFormat}";
+				}
+				else if (DateCalcFirstDatePicker.Date < DateCalcSecondDatePicker.Date)
+				{
+					DateResultLabel.Text =
+						$"The difference is: {DateCalcSecondDatePicker.Date - DateCalcFirstDatePicker.Date} {dateFormat}";
+				}
+				else if (DateCalcFirstDatePicker.Date == DateCalcSecondDatePicker.Date)
+				{
+					DateResultLabel.Text = "There is no difference";
+				}
+			}
+		}
+		
+		private void FirstTimePickerCheckbox_IsCheckChanged(object sender, EventArgs e)
+		{
+			switch (FirstTimePickerCheckbox.IsChecked)
+			{
+				case true:
+				{
+					ViewTimePickersForDateCalc(FirstDatePickerTime, true);
+					break;
+				}
+				case false:
+				{
+					ViewTimePickersForDateCalc(FirstDatePickerTime, false);
+					break;
+				}
+			}
+		}
+		
+		private void SecondTimePickerCheckbox_IsCheckedChanged(object sender, EventArgs e)
+		{
+			switch (SecondTimePickerCheckbox.IsChecked)
+			{
+				case true:
+				{
+					ViewTimePickersForDateCalc(SecondDatePickerTime, true);
+					break;
+				}
+				case false:
+				{
+					ViewTimePickersForDateCalc(SecondDatePickerTime, false);
+					break;
+				}
+			}
+		}
+
 		// Settings Page event handlers
 		private void DarkModeSwitch_OnToggled(object sender, ToggledEventArgs e)
 		{
@@ -580,6 +712,11 @@ namespace ExpandCalculator
 		/*
 		 UNDERLYING PROGRAM METHODS AND FUNCTIONS
 		 */
+		
+		private void ViewTimePickersForDateCalc(MaterialTimePicker timePicker, bool visibility)
+		{
+			timePicker.IsVisible = visibility;
+		}
 
 		private void HideAreaErrorLabel()
 		{
