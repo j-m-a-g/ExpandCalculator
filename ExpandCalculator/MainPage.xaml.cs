@@ -37,7 +37,7 @@ namespace ExpandCalculator
 		private void ConversionCalcImageButton_Clicked(object sender, EventArgs e)
 		{
 			ClickedOrUnclicked(ConversionCalcImageButton);
-			SwitchXamlPages(ConversionCalculator);
+			SwitchXamlPages(FormulaReference);
 		}
 
 		private void AreaCalcImageButton_Clicked(object sender, EventArgs e)
@@ -68,6 +68,32 @@ namespace ExpandCalculator
 		{
 			ClickedOrUnclicked(SettingsImageButton);
 			SwitchXamlPages(SettingsStackLayout);
+		}
+		
+		// Formula references page event handlers
+		private void FormulaReferenceGoButton_OnClicked(object sender, EventArgs e)
+		{
+			switch (FormulaReferenceSegmentedControl.SelectedSegment)
+			{
+				case 0:
+				{
+					SwitchFormulaReferencePages(AreaFormulasStackLayout);
+					break;
+				}
+				case 1:
+				{
+					SwitchFormulaReferencePages(VolumeFormulasStackLayout);
+					break;
+				}
+			}
+
+			void SwitchFormulaReferencePages(StackLayout visibleReferencePage)
+			{
+				AreaFormulasStackLayout.IsVisible = false;
+				VolumeFormulasStackLayout.IsVisible = false;
+
+				visibleReferencePage.IsVisible = true;
+			}
 		}
 		
 		// AreaCalculator event handlers
@@ -825,7 +851,7 @@ namespace ExpandCalculator
 			CalcModesGrid.IsVisible = false;
 			NavigationInstructionLabel.IsVisible = false;
 			
-			ConversionCalculator.IsVisible = false;
+			FormulaReference.IsVisible = false;
 			AreaCalculator.IsVisible = false;
 			VolumeCalculator.IsVisible = false;
 			DateCalculator.IsVisible = false;

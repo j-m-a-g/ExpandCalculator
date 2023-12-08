@@ -89,15 +89,16 @@
     <AndroidResource Include="Resources\drawable\icons8_about_96.png" />
     <AndroidResource Include="Resources\drawable\icons8_border_bottom_96.png" />
     <AndroidResource Include="Resources\drawable\icons8_border_left_96.png" />
-    <AndroidResource Include="Resources\drawable\icons8_calculator_96.png" />
     <AndroidResource Include="Resources\drawable\icons8_clock_96.png" />
     <AndroidResource Include="Resources\drawable\icons8_cube_96.png" />
     <AndroidResource Include="Resources\drawable\icons8_date_96.png" />
     <AndroidResource Include="Resources\drawable\icons8_diameter_96.png" />
     <AndroidResource Include="Resources\drawable\icons8_feedback_96.png" />
     <AndroidResource Include="Resources\drawable\icons8_home_384.png" />
+    <AndroidResource Include="Resources\drawable\icons8_insert_equation_96.png" />
     <AndroidResource Include="Resources\drawable\icons8_radius_96.png" />
     <AndroidResource Include="Resources\drawable\icons8_rhomboid_shape_96.png" />
+    <AndroidResource Include="Resources\drawable\icons8_right_96.png" />
     <AndroidResource Include="Resources\drawable\icons8_settings_96.png" />
     <AndroidResource Include="Resources\drawable\icons8_update_96.png" />
     <AndroidResource Include="Resources\drawable\parallelogram_base_image.png" />

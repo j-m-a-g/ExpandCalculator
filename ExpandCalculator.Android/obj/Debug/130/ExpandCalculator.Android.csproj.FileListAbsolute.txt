@@ -709,7 +709,6 @@ C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\res\draw
 C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\res\drawable\icons8_about_96.png
 C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\res\drawable\icons8_border_bottom_96.png
 C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\res\drawable\icons8_border_left_96.png
-C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\res\drawable\icons8_calculator_96.png
 C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\res\drawable\icons8_cube_96.png
 C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\res\drawable\icons8_date_96.png
 C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\res\drawable\icons8_diameter_96.png
@@ -747,3 +746,5 @@ C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\lp\113\j
 C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\lp\114\jl\files.cache
 C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\res\drawable\icons8_clock_96.png
 C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\res\drawable\icons8_update_96.png
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\res\drawable\icons8_insert_equation_96.png
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\res\drawable\icons8_right_96.png

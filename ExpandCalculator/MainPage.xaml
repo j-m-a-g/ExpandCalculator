@@ -64,7 +64,7 @@
                          HeightRequest="60"
                          Grid.Column="1"
                          Grid.Row="1"
-                         Source="icons8_calculator_96.pmg"
+                         Source="icons8_insert_equation_96.pmg"
                          BackgroundColor="#27b1f1"
                          CornerRadius="20"
                          Padding="10"
@@ -75,14 +75,14 @@
                         FontSize="14.5"
                         Grid.Column="2"
                         Grid.Row="1"
-                        Text="Conversion Calculator"
+                        Text="Formula Reference"
                         TextColor="White"/>
                     <material:MaterialLabel
                         Grid.Column="3"
                         Grid.Row="1"
                         VerticalOptions="Center"
                         FontSize="14"
-                        Text="Converts two units of measure."
+                        Text="Allows you to see formulas that you might know and not know."
                         TextColor="WhiteSmoke"/>
 
                     <!--Area calculator-->
@@ -163,7 +163,7 @@
                         VerticalOptions="Center"
                         FontSize="14"
                         TextColor="WhiteSmoke"
-                        Text="Calculates the difference between two dates."/>
+                        Text="Calculates the difference between two dates/times."/>
 
                 </Grid>
                 
@@ -182,12 +182,257 @@
         <!--SEPARATE PAGES FOR THE APP-->
         
         <!--Conversion calculator page-->
-        <ScrollView x:Name="ConversionCalculator"
+        <ScrollView x:Name="FormulaReference"
+            Padding="10, 100, 10, 10"
             IsVisible="False">
             
             <StackLayout>
                 
+                <Image
+                    Source="icons8_insert_equation_96.png"
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    Margin="0, 0, 0, 5"/>
+                <material:MaterialLabel
+                    Text="Formula Reference"
+                    Margin="0, 0, 0, 10"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    FontSize="Title"
+                    FontAttributes="Bold"
+                    TextColor="White"/>
                 
+                <Grid>
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="80"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    
+                    <controls:SegmentedControl x:Name="FormulaReferenceSegmentedControl"
+                        TintColor="#005395"
+                        SelectedTextColor="White"
+                        Grid.Column="0"
+                        Grid.Row="0">
+                    
+                        <controls:SegmentedControl.Children>
+                            <controls:SegmentedControlOption Text="Area"/>
+                            <controls:SegmentedControlOption Text="Volume"/>
+                            <controls:SegmentedControlOption Text="Surface Area"/>
+                        </controls:SegmentedControl.Children>
+                    
+                    </controls:SegmentedControl>
+                    <material:MaterialButton x:Name="FormulaReferenceGoButton"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Text="Go"
+                        BackgroundColor="#005395"
+                        Clicked="FormulaReferenceGoButton_OnClicked"
+                        TrailingIcon="icons8_right_96.png"/>
+                    
+                </Grid>
+                
+                <StackLayout x:Name="AreaFormulasStackLayout">
+                    
+                    <!--AREA FORMULAS-->
+                    <material:MaterialLabel
+                        Text="Area Formulas"
+                        HorizontalOptions="Center"
+                        FontSize="Large"
+                        TextColor="White"/>
+                    <!--Square-->
+                    <material:MaterialCard
+                        BackgroundColor="#4dbef3">
+                        <StackLayout>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="20"
+                                FontAttributes="Bold"
+                                Text="Square"/>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="30"
+                                FontAttributes="Italic"
+                                Text="A = a²"/>
+                        </StackLayout>
+                    </material:MaterialCard>
+                    <!--Rectangle-->
+                    <material:MaterialCard
+                        BackgroundColor="#4dbef3">
+                        <StackLayout>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="20"
+                                FontAttributes="Bold"
+                                Text="Rectangle"/>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="30"
+                                FontAttributes="Italic"
+                                Text="A = length × width"/>
+                        </StackLayout>
+                    </material:MaterialCard>
+                    <!--Triangle (General)-->
+                    <material:MaterialCard
+                        BackgroundColor="#4dbef3">
+                        <StackLayout>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="20"
+                                FontAttributes="Bold"
+                                Text="Triangle (General)"/>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="30"
+                                FontAttributes="Italic"
+                                Text="A = (base × height) ÷ 2"/>
+                        </StackLayout>
+                    </material:MaterialCard>
+                    <!--Right-Angled Triangle-->
+                    <material:MaterialCard
+                        BackgroundColor="#4dbef3">
+                        <StackLayout>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="20"
+                                FontAttributes="Bold"
+                                Text="Right-Angled Triangle"/>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="30"
+                                FontAttributes="Italic"
+                                Text="A = (leg A × leg B) ÷ 2"/>
+                        </StackLayout>
+                    </material:MaterialCard>
+                    <!--Parallelogram-->
+                    <material:MaterialCard
+                        BackgroundColor="#4dbef3">
+                        <StackLayout>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="20"
+                                FontAttributes="Bold"
+                                Text="Parallelogram"/>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="30"
+                                FontAttributes="Italic"
+                                Text="A = base × height"/>
+                        </StackLayout>
+                    </material:MaterialCard>
+                    <!--Trapezoid-->
+                    <material:MaterialCard
+                        BackgroundColor="#4dbef3">
+                        <StackLayout>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="20"
+                                FontAttributes="Bold"
+                                Text="Trapezoid"/>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="26"
+                                FontAttributes="Italic"
+                                Text="A = (base A + base B) × height ÷ 2"/>
+                        </StackLayout>
+                    </material:MaterialCard>
+                    <!--Circle-->
+                    <material:MaterialCard
+                        BackgroundColor="#4dbef3">
+                        <StackLayout>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="20"
+                                FontAttributes="Bold"
+                                Text="Circle"/>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="30"
+                                FontAttributes="Italic"
+                                Text="A = radius² π"/>
+                        </StackLayout>
+                    </material:MaterialCard>
+                    
+                </StackLayout>
+                
+                <!--VOLUME FORMULAS-->
+                <StackLayout x:Name="VolumeFormulasStackLayout"
+                             IsVisible="False">
+                    
+                    <material:MaterialLabel
+                        Text="Volume Formulas"
+                        HorizontalOptions="Center"
+                        FontSize="Large"
+                        TextColor="White"/>
+                    <!--Cube-->
+                    <material:MaterialCard
+                        BackgroundColor="#4dbef3">
+                        <StackLayout>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="20"
+                                FontAttributes="Bold"
+                                Text="Cube"/>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="30"
+                                FontAttributes="Italic"
+                                Text="V = a³"/>
+                        </StackLayout>
+                    </material:MaterialCard>
+                    <!--Rectangular Prism-->
+                    <material:MaterialCard
+                        BackgroundColor="#4dbef3">
+                        <StackLayout>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="20"
+                                FontAttributes="Bold"
+                                Text="Rectangular Prism"/>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="30"
+                                FontAttributes="Italic"
+                                Text="V = length × width × height"/>
+                        </StackLayout>
+                    </material:MaterialCard>
+                    <!--Cylinder-->
+                    <material:MaterialCard
+                        BackgroundColor="#4dbef3">
+                        <StackLayout>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="20"
+                                FontAttributes="Bold"
+                                Text="Cylinder"/>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="30"
+                                FontAttributes="Italic"
+                                Text="V = (radius² × height) × π"/>
+                        </StackLayout>
+                    </material:MaterialCard>
+                    <!--Sphere-->
+                    <material:MaterialCard
+                        BackgroundColor="#4dbef3">
+                        <StackLayout>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="20"
+                                FontAttributes="Bold"
+                                Text="Sphere"/>
+                            <material:MaterialLabel
+                                TextColor="White"
+                                FontSize="30"
+                                FontAttributes="Italic"
+                                Text="V = (4 ÷ 3 × π) × radius³"/>
+                        </StackLayout>
+                    </material:MaterialCard>
+                    
+                </StackLayout>
                 
             </StackLayout>
             
@@ -593,14 +838,16 @@
                     FontAttributes="Bold"
                     Text="Version 1.12.32"/>
                 <material:MaterialButton x:Name="ExpandUpdateButton"
-                    Text="Update"
-                    DisabledBackgroundColor="#005395"
-                    BackgroundColor="#005395"
+                    Text="Check for Updates"
+                    Margin="0, 5, 0, 5"
+                    DisabledBackgroundColor="Transparent"
+                    BackgroundColor="Transparent"
+                    BorderColor="#005395"
                     TextColor="White"
                     LeadingIcon="icons8_update_96.png"
                     Clicked="ExpandUpdateButton_OnClicked"
-                    ClassId="https://github.com/j-m-a-g/ExpandCalculator/releases"
-                    ButtonType="Tonal"/>
+                    ButtonType="Outlined"
+                    ClassId="https://github.com/j-m-a-g/ExpandCalculator/releases"/>
                 <Image
                     Source="icons8_feedback_96.png"
                     WidthRequest="30"
@@ -692,7 +939,7 @@
                 Margin="0, 0, 10, 0"/>
             <ImageButton x:Name="ConversionCalcImageButton" 
                 Clicked="ConversionCalcImageButton_Clicked"
-                Source="icons8_calculator_96.png"
+                Source="icons8_insert_equation_96.png"
                 BackgroundColor="#0297df"
                 Aspect="AspectFit"
                 Padding="10"
