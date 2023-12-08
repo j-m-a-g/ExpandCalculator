@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Plugin.MaterialDesignControls.Material3;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace ExpandCalculator
@@ -568,7 +569,7 @@ namespace ExpandCalculator
 		// DateCalculator event handlers
 		private void DateCalcDifferenceButton_OnClicked(object sender, EventArgs e)
 		{
-			string dateFormat = "(days:hours:minutes:seconds)";
+			string dateFormat = "(days.hours:minutes:seconds)";
 			
 			// Checks whether the DateResultLabel
 			// is already visible or not to improve
@@ -695,8 +696,15 @@ namespace ExpandCalculator
 				}
 			}
 		}
+		
+		// About page event handlers
+		private async void ExpandUpdateButton_OnClicked(object sender, EventArgs e)
+		{
+			string url = ExpandUpdateButton.ClassId;
+			await Browser.OpenAsync(url);
+		}
 
-		// Settings Page event handlers
+		// Settings page event handlers
 		private void DarkModeSwitch_OnToggled(object sender, ToggledEventArgs e)
 		{
 			if (DarkModeSwitch.IsToggled == true)

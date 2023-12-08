@@ -152,7 +152,7 @@
                          IsEnabled="False"
                          BackgroundColor="#27b1f1"/>
                     <material:MaterialLabel
-                        Text="Date Calculator"
+                        Text="Date / Time Calculator"
                         TextColor="White"
                         Grid.Column="2"
                         Grid.Row="4"
@@ -212,6 +212,8 @@
                      LeadingIcon="icons8_rhomboid_shape_96.png"
                      Placeholder="Select a 2D Shape"
                      BackgroundColor="#0173b7"
+                     TextColor="White"
+                     FocusedTextColor="White"
                      FocusedBackgroundColor="#0173b7"
                      PlaceholderColor="WhiteSmoke"
                      BorderColor="WhiteSmoke"
@@ -474,7 +476,7 @@
             <StackLayout>
                 
                 <material:MaterialLabel
-                    Text="Date"
+                    Text="Date / Time"
                     HorizontalOptions="Center"
                     HorizontalTextAlignment="Center"
                     FontSize="Title"
@@ -488,17 +490,25 @@
                     BackgroundColor="#0173b7"
                     FocusedBackgroundColor="#0173b7"
                     LabelTextColor="White"
-                    FocusedLabelTextColor="White"/>
+                    FocusedLabelTextColor="White"
+                    FocusedTextColor="White"
+                    TextColor="White"/>
                 <material:MaterialCheckbox x:Name="FirstTimePickerCheckbox"
                     Text="Certain time"
                     TextColor="White"
                     Animation="Fade"
                     IsCheckedChanged="FirstTimePickerCheckbox_IsCheckChanged"/>
                 <material:MaterialTimePicker x:Name="FirstDatePickerTime"
-                         IsVisible="False"
-                         BackgroundColor="#0173b7"
-                         FocusedBackgroundColor="#0173b7"
-                         TextColor="White"/>
+                     IsVisible="False"
+                     Time="1:00"
+                     FocusedLabelTextColor="White"
+                     LabelText="Time for the first date"
+                     LabelTextColor="White"
+                     LeadingIcon="icons8_clock_96.png"
+                     BackgroundColor="#0173b7"
+                     FocusedBackgroundColor="#0173b7"
+                     FocusedTextColor="White"
+                     TextColor="White"/>
                 <material:MaterialLabel
                     Text="-"
                     FontAttributes="Italic, Bold"
@@ -513,6 +523,8 @@
                     BackgroundColor="#0173b7"
                     FocusedBackgroundColor="#0173b7"
                     LabelTextColor="White"
+                    FocusedTextColor="White"
+                    TextColor="White"
                     FocusedLabelTextColor="White"/>
                 <material:MaterialCheckbox x:Name="SecondTimePickerCheckbox"
                     Text="Certain time"
@@ -521,6 +533,12 @@
                     IsCheckedChanged="SecondTimePickerCheckbox_IsCheckedChanged"/>
                 <material:MaterialTimePicker x:Name="SecondDatePickerTime"
                     IsVisible="False"
+                    Time="1:00"
+                    FocusedLabelTextColor="White"
+                    FocusedTextColor="White"
+                    LabelText="Time for the second date"
+                    LabelTextColor="White"
+                    LeadingIcon="icons8_clock_96.png"
                     BackgroundColor="#0173b7"
                     FocusedBackgroundColor="#0173b7"
                     TextColor="White"/>
@@ -531,6 +549,7 @@
                     Clicked="DateCalcDifferenceButton_OnClicked"/>
                 <material:MaterialLabel x:Name="DateResultLabel"
                     BackgroundColor="#0283cb"
+                    Margin="0, 5, 0, 0"
                     IsVisible="False"
                     FontSize="Medium"
                     FontAttributes="Italic"
@@ -572,7 +591,16 @@
                     TextColor="White"
                     FontSize="16"
                     FontAttributes="Bold"
-                    Text="Version 1.12.31"/>
+                    Text="Version 1.12.32"/>
+                <material:MaterialButton x:Name="ExpandUpdateButton"
+                    Text="Update"
+                    DisabledBackgroundColor="#005395"
+                    BackgroundColor="#005395"
+                    TextColor="White"
+                    LeadingIcon="icons8_update_96.png"
+                    Clicked="ExpandUpdateButton_OnClicked"
+                    ClassId="https://github.com/j-m-a-g/ExpandCalculator/releases"
+                    ButtonType="Tonal"/>
                 <Image
                     Source="icons8_feedback_96.png"
                     WidthRequest="30"

@@ -745,3 +745,5 @@ C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\lp\110\j
 C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\lp\111\jl\files.cache
 C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\lp\113\jl\files.cache
 C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\lp\114\jl\files.cache
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\res\drawable\icons8_clock_96.png
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\res\drawable\icons8_update_96.png

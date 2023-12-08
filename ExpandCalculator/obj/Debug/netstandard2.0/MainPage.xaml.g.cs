@@ -158,6 +158,9 @@ namespace ExpandCalculator {
         private global::Xamarin.Forms.ScrollView AboutStackLayout;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Plugin.MaterialDesignControls.Material3.MaterialButton ExpandUpdateButton;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.ScrollView SettingsStackLayout;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -237,6 +240,7 @@ namespace ExpandCalculator {
             DateCalcDifferenceButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialButton>(this, "DateCalcDifferenceButton");
             DateResultLabel = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialLabel>(this, "DateResultLabel");
             AboutStackLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ScrollView>(this, "AboutStackLayout");
+            ExpandUpdateButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialButton>(this, "ExpandUpdateButton");
             SettingsStackLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ScrollView>(this, "SettingsStackLayout");
             DarkModeSwitch = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Switch>(this, "DarkModeSwitch");
             NavigationFlexLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.FlexLayout>(this, "NavigationFlexLayout");
