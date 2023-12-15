@@ -913,6 +913,19 @@
                         ThumbColor="#0173b7"
                         OnColor="#005395"
                         IsToggled="False"/>
+                    <material:MaterialLabel
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        TextColor="White"
+                        FontSize="Medium"
+                        Text="Holiday Mode"/>
+                    <Switch x:Name="HolidayModeSwitch"
+                            Grid.Row="2"
+                            Grid.Column="2"
+                            Toggled="HolidayModeSwitch_OnToggled"
+                            ThumbColor="#0173b7"
+                            OnColor="#005395"
+                            IsToggled="False"/>
                     
                 </Grid>
             
