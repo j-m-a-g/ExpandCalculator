@@ -16,6 +16,13 @@
 
             <StackLayout>
                 
+                <Image x:Name="HolidayModeSantaHat"
+                    Source="icons8_santa_hat_96.png"
+                    Margin="-30, 0, 0, -20"
+                    WidthRequest="40"
+                    Rotation="-10"
+                    IsVisible="False"
+                    HeightRequest="80"/>
                 <Image
                     Source="Expand_Calculator_Icon.png"
                     WidthRequest="60"

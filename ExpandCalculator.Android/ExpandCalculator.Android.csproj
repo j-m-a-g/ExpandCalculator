@@ -99,6 +99,7 @@
     <AndroidResource Include="Resources\drawable\icons8_radius_96.png" />
     <AndroidResource Include="Resources\drawable\icons8_rhomboid_shape_96.png" />
     <AndroidResource Include="Resources\drawable\icons8_right_96.png" />
+    <AndroidResource Include="Resources\drawable\icons8_santa_hat_96.png" />
     <AndroidResource Include="Resources\drawable\icons8_settings_96.png" />
     <AndroidResource Include="Resources\drawable\icons8_update_96.png" />
     <AndroidResource Include="Resources\drawable\parallelogram_base_image.png" />

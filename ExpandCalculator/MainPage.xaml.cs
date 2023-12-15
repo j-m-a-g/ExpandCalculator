@@ -747,10 +747,12 @@ namespace ExpandCalculator
 			HolidayModeSwitch.IsToggled = false;
 			if (DarkModeSwitch.IsToggled)
 			{
+				HolidayModeSantaHat.IsVisible = false;
 				EnableDarkMode("#262626", "#434343", "#555555", "#979797");
 			}
 			else
 			{
+				HolidayModeSantaHat.IsVisible = false;
 				DisableDarkMode("#005395", "#0173b7", "#27b1f1", "");
 			}
 		}
@@ -760,10 +762,12 @@ namespace ExpandCalculator
 			DarkModeSwitch.IsToggled = false;
 			if (HolidayModeSwitch.IsToggled)
 			{
+				HolidayModeSantaHat.IsVisible = true;
 				EnableDarkMode("#ff001e", "#00c000", "#00d400", "#00ff00");
 			}
 			else
 			{
+				HolidayModeSantaHat.IsVisible = false;
 				DisableDarkMode("#005395", "#0173b7", "#27b1f1", "");
 			}
 		}
