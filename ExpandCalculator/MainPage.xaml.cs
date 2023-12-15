@@ -22,6 +22,17 @@ namespace ExpandCalculator
 		public MainPage()
 		{
 			InitializeComponent();
+			
+			OSAppTheme userTheme = Application.Current.RequestedTheme;
+
+			if (userTheme == OSAppTheme.Dark)
+			{
+				DarkModeSwitch.IsToggled = true;
+			}
+			else
+			{
+				DarkModeSwitch.IsToggled = false;
+			}
 		}
 		
 		// WelcomeScrollView event handlers
@@ -736,7 +747,7 @@ namespace ExpandCalculator
 			HolidayModeSwitch.IsToggled = false;
 			if (DarkModeSwitch.IsToggled)
 			{
-				EnableDarkMode("#262626", "#434343", "#555555", "");
+				EnableDarkMode("#262626", "#434343", "#555555", "#979797");
 			}
 			else
 			{
@@ -887,36 +898,50 @@ namespace ExpandCalculator
 		{
 			ExpandCalcMain.BackgroundColor = Color.FromHex(darkBackgroundAccent);
 			
+			
 			NavigationFlexLayout.BackgroundColor = Color.FromHex(darkAccent2);
 			AreaShapePicker.BackgroundColor = Color.FromHex(darkAccent2);
 			AreaShapePicker.FocusedBackgroundColor = Color.FromHex(darkAccent2);
+			
 			
 			ImageButton1.BackgroundColor = Color.FromHex(darkAccent3);
 			ImageButton2.BackgroundColor = Color.FromHex(darkAccent3);
 			ImageButton3.BackgroundColor = Color.FromHex(darkAccent3);
 			ImageButton4.BackgroundColor = Color.FromHex(darkAccent3);
+			
 			CalculateSquareAreaButton.BackgroundColor = Color.FromHex(darkAccent3);
 			CalculateTriangleAreaButton.BackgroundColor = Color.FromHex(darkAccent3);
 			CalculateCircleAreaButton.BackgroundColor = Color.FromHex(darkAccent3);
 			CalculateTrapezoidAreaButton.BackgroundColor = Color.FromHex(darkAccent3);
+			
 			AreaUnitsChipsGroup.BorderColor = Color.FromHex(darkAccent3);
+			
 			ExpandUpdateButton.BorderColor = Color.FromHex(darkAccent3);
+			
 			DateCalcDifferenceButton.BackgroundColor = Color.FromHex(darkAccent3);
 
+			
 			SquareFirstSideEntry.BackgroundColor = Color.FromHex(darkAccent4);
 			SquareFirstSideEntry.FocusedBackgroundColor = Color.FromHex(darkAccent4);
+			
 			SquareSecondSideEntry.BackgroundColor = Color.FromHex(darkAccent4);
 			SquareSecondSideEntry.FocusedBackgroundColor = Color.FromHex(darkAccent4);
+			
 			TriangleBaseEntry.BackgroundColor = Color.FromHex(darkAccent4);
 			TriangleBaseEntry.FocusedBackgroundColor = Color.FromHex(darkAccent4);
+			
 			TriangleHeightEntry.BackgroundColor = Color.FromHex(darkAccent4);
 			TriangleHeightEntry.FocusedBackgroundColor = Color.FromHex(darkAccent4);
+			
 			TrapezoidHeightEntry.BackgroundColor = Color.FromHex(darkAccent4);
 			TrapezoidHeightEntry.FocusedBackgroundColor = Color.FromHex(darkAccent4);
+			
 			TrapezoidFirstBaseEntry.BackgroundColor = Color.FromHex(darkAccent4);
 			TrapezoidFirstBaseEntry.FocusedBackgroundColor = Color.FromHex(darkAccent4);
+			
 			TrapezoidSecondBaseEntry.BackgroundColor = Color.FromHex(darkAccent4);
 			TrapezoidSecondBaseEntry.FocusedBackgroundColor = Color.FromHex(darkAccent4);
+			
 			CircleRadiusDiameterEntry.BackgroundColor = Color.FromHex(darkAccent4);
 			CircleRadiusDiameterEntry.FocusedBackgroundColor = Color.FromHex(darkAccent4);
 		}
@@ -925,14 +950,17 @@ namespace ExpandCalculator
 		{
 			ExpandCalcMain.BackgroundColor = Color.FromHex("#0297df");
 			
+			
 			CalculateSquareAreaButton.BackgroundColor = Color.FromHex(lightAccent1);
 			CalculateSquareAreaButton.BackgroundColor = Color.FromHex(lightAccent1);
 			CalculateTriangleAreaButton.BackgroundColor = Color.FromHex(lightAccent1);
 			CalculateCircleAreaButton.BackgroundColor = Color.FromHex(lightAccent1);
 			CalculateTrapezoidAreaButton.BackgroundColor = Color.FromHex(lightAccent1);
 			
+			
 			NavigationFlexLayout.BackgroundColor = Color.FromHex(lightAccent2);
 			AreaShapePicker.BackgroundColor = Color.FromHex(lightAccent2);
+			
 			
 			ImageButton1.BackgroundColor = Color.FromHex(lightAccent3);
 			ImageButton2.BackgroundColor = Color.FromHex(lightAccent3);
