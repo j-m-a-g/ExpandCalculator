@@ -6,15 +6,74 @@
              xmlns:controls="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
              x:Class="ExpandCalculator.MainPage"
              BackgroundColor="#0297df">
-
+    
     <StackLayout>
         
+        <ScrollView x:Name="NewFeatureIntroScrollView"
+                     IsVisible="True"
+                     BackgroundColor="#ff001e"
+                     VerticalOptions="FillAndExpand"
+                     Padding="20"
+                     HorizontalOptions="FillAndExpand">
+            
+            <StackLayout x:Name="NewFeatureStackViewChild">
+                
+                <ImageButton
+                    Source="_20231216_031503071_iOS.png"
+                    IsEnabled="False"
+                    BorderColor="#0297df"
+                    BorderWidth="2"
+                    HeightRequest="387"
+                    CornerRadius="30"/>
+                <material:MaterialLabel x:Name="NewFeatureTitle"
+                    Margin="0, 15, 0, 0"
+                    FontSize="Title"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    TextColor="#00d400"
+                    Text="&quot;You should make a Christmas mode...&quot;"/>
+                <material:MaterialLabel x:Name="NewFeatureMedium1"
+                    Margin="0, 10, 0, 0"
+                    FontSize="Medium"
+                    Padding="10, 0, 0, 0"
+                    HorizontalTextAlignment="Start"
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    TextColor="White"
+                    Text="Well Rayna, if you dream it, I will make it. The Expand Calculator app now includes a new, &quot;Holiday theme,&quot; that you can find in the settings page. If you would like to see yourself up here like @fridaythen09, feel free to suggest any new &quot;ground-breaking,&quot; features directly to me."/>
+                <material:MaterialLabel x:Name="NewFeatureMedium2"
+                    Margin="0, 5, 0, 0"
+                    FontSize="Medium"
+                    Padding="10, 0, 0, 0"
+                    HorizontalTextAlignment="Start"
+                    VerticalTextAlignment="Center"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    TextColor="White"
+                    Text="Now, there is also a new, &quot;formula reference,&quot; page that allows you to have every mathematical formula in the convenience of your pocket."/>
+                <material:MaterialButton x:Name="NewFeatureContinueButton"
+                     Margin="0, 10, 0, 0"
+                     VerticalOptions="EndAndExpand"
+                     BackgroundColor="#00d400"
+                     Clicked="NewFeatureContinueButton_OnClicked"
+                     Text="Let's Go"/>
+                
+            </StackLayout>
+            
+        </ScrollView>
+        
         <ScrollView x:Name="WelcomeScrollView"
-                HorizontalScrollBarVisibility="Default"
-                VerticalScrollBarVisibility="Default"
-                Padding="10, 100, 10, 0">
+                    HorizontalScrollBarVisibility="Default"
+                    VerticalScrollBarVisibility="Default"
+                    IsVisible="False"
+                    Padding="10, 100, 10, 0">
 
-            <StackLayout>
+            <StackLayout x:Name="WelcomeStackLayout"
+                IsVisible="False">
                 
                 <Image x:Name="HolidayModeSantaHat"
                     Source="icons8_santa_hat_96.png"
@@ -183,6 +242,7 @@
             HorizontalTextAlignment="Center"
             VerticalTextAlignment="Center"
             TextColor="WhiteSmoke"
+            IsVisible="False"
             Margin="0, 20, 0, 0"/>
 
 
@@ -947,6 +1007,7 @@
             VerticalOptions="EndAndExpand"
             BackgroundColor="#0173b7"
             HeightRequest="50"
+            IsVisible="False"
             Padding="10">
 
             <ImageButton x:Name="HomeImageButton" 

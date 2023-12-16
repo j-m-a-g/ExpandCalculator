@@ -24,7 +24,8 @@ namespace ExpandCalculator
 			InitializeComponent();
 			
 			OSAppTheme userTheme = Application.Current.RequestedTheme;
-
+			
+			
 			if (userTheme == OSAppTheme.Dark)
 			{
 				DarkModeSwitch.IsToggled = true;
@@ -33,6 +34,18 @@ namespace ExpandCalculator
 			{
 				DarkModeSwitch.IsToggled = false;
 			}
+		}
+		
+		// NewFeatureStackLayout event handlers
+		private void NewFeatureContinueButton_OnClicked(object sender, EventArgs e)
+		{
+			NewFeatureStackViewChild.IsVisible = false;
+			NewFeatureIntroScrollView.IsVisible = false;
+			
+			WelcomeScrollView.IsVisible = true;
+			WelcomeStackLayout.IsVisible = true;
+			NavigationInstructionLabel.IsVisible = true;
+			NavigationFlexLayout.IsVisible = true;
 		}
 		
 		// WelcomeScrollView event handlers
@@ -753,7 +766,7 @@ namespace ExpandCalculator
 			else
 			{
 				HolidayModeSantaHat.IsVisible = false;
-				DisableDarkMode("#005395", "#0173b7", "#27b1f1", "");
+				DisableDarkMode("#005395", "#0173b7", "#27b1f1", "#4dbef3");
 			}
 		}
 		
@@ -768,7 +781,7 @@ namespace ExpandCalculator
 			else
 			{
 				HolidayModeSantaHat.IsVisible = false;
-				DisableDarkMode("#005395", "#0173b7", "#27b1f1", "");
+				DisableDarkMode("#005395", "#0173b7", "#27b1f1", "#4dbef3");
 			}
 		}
 		
@@ -902,8 +915,13 @@ namespace ExpandCalculator
 		{
 			ExpandCalcMain.BackgroundColor = Color.FromHex(darkBackgroundAccent);
 			
-			
 			NavigationFlexLayout.BackgroundColor = Color.FromHex(darkAccent2);
+			
+			DateCalcFirstDatePicker.BackgroundColor = Color.FromHex(darkAccent2);
+			DateCalcSecondDatePicker.BackgroundColor = Color.FromHex(darkAccent2);
+			FirstDatePickerTime.BackgroundColor = Color.FromHex(darkAccent2);
+			SecondDatePickerTime.BackgroundColor = Color.FromHex(darkAccent2);
+			
 			AreaShapePicker.BackgroundColor = Color.FromHex(darkAccent2);
 			AreaShapePicker.FocusedBackgroundColor = Color.FromHex(darkAccent2);
 			
@@ -913,10 +931,12 @@ namespace ExpandCalculator
 			ImageButton3.BackgroundColor = Color.FromHex(darkAccent3);
 			ImageButton4.BackgroundColor = Color.FromHex(darkAccent3);
 			
+			
 			CalculateSquareAreaButton.BackgroundColor = Color.FromHex(darkAccent3);
 			CalculateTriangleAreaButton.BackgroundColor = Color.FromHex(darkAccent3);
 			CalculateCircleAreaButton.BackgroundColor = Color.FromHex(darkAccent3);
 			CalculateTrapezoidAreaButton.BackgroundColor = Color.FromHex(darkAccent3);
+			DateCalcDifferenceButton.BackgroundColor = Color.FromHex(darkAccent3);
 			
 			AreaUnitsChipsGroup.BorderColor = Color.FromHex(darkAccent3);
 			
@@ -960,16 +980,51 @@ namespace ExpandCalculator
 			CalculateTriangleAreaButton.BackgroundColor = Color.FromHex(lightAccent1);
 			CalculateCircleAreaButton.BackgroundColor = Color.FromHex(lightAccent1);
 			CalculateTrapezoidAreaButton.BackgroundColor = Color.FromHex(lightAccent1);
+			DateCalcDifferenceButton.BackgroundColor = Color.FromHex(lightAccent1);
+			
+			ExpandUpdateButton.BorderColor = Color.FromHex(lightAccent1);
 			
 			
 			NavigationFlexLayout.BackgroundColor = Color.FromHex(lightAccent2);
+			
+			DateCalcFirstDatePicker.BackgroundColor = Color.FromHex(lightAccent2);
+			DateCalcSecondDatePicker.BackgroundColor = Color.FromHex(lightAccent2);
+			FirstDatePickerTime.BackgroundColor = Color.FromHex(lightAccent2);
+			SecondDatePickerTime.BackgroundColor = Color.FromHex(lightAccent2);
+			
 			AreaShapePicker.BackgroundColor = Color.FromHex(lightAccent2);
+			AreaShapePicker.FocusedBackgroundColor = Color.FromHex(lightAccent2);
 			
 			
 			ImageButton1.BackgroundColor = Color.FromHex(lightAccent3);
 			ImageButton2.BackgroundColor = Color.FromHex(lightAccent3);
 			ImageButton3.BackgroundColor = Color.FromHex(lightAccent3);
 			ImageButton4.BackgroundColor = Color.FromHex(lightAccent3);
+			
+			
+			SquareFirstSideEntry.BackgroundColor = Color.FromHex(lightAccent4);
+			SquareFirstSideEntry.FocusedBackgroundColor = Color.FromHex(lightAccent4);
+			
+			SquareSecondSideEntry.BackgroundColor = Color.FromHex(lightAccent4);
+			SquareSecondSideEntry.FocusedBackgroundColor = Color.FromHex(lightAccent4);
+			
+			TriangleBaseEntry.BackgroundColor = Color.FromHex(lightAccent4);
+			TriangleBaseEntry.FocusedBackgroundColor = Color.FromHex(lightAccent4);
+			
+			TriangleHeightEntry.BackgroundColor = Color.FromHex(lightAccent4);
+			TriangleHeightEntry.FocusedBackgroundColor = Color.FromHex(lightAccent4);
+			
+			TrapezoidHeightEntry.BackgroundColor = Color.FromHex(lightAccent4);
+			TrapezoidHeightEntry.FocusedBackgroundColor = Color.FromHex(lightAccent4);
+			
+			TrapezoidFirstBaseEntry.BackgroundColor = Color.FromHex(lightAccent4);
+			TrapezoidFirstBaseEntry.FocusedBackgroundColor = Color.FromHex(lightAccent4);
+			
+			TrapezoidSecondBaseEntry.BackgroundColor = Color.FromHex(lightAccent4);
+			TrapezoidSecondBaseEntry.FocusedBackgroundColor = Color.FromHex(lightAccent4);
+			
+			CircleRadiusDiameterEntry.BackgroundColor = Color.FromHex(lightAccent4);
+			CircleRadiusDiameterEntry.FocusedBackgroundColor = Color.FromHex(lightAccent4);
 		}
 	}
 }

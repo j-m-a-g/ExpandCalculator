@@ -749,3 +749,4 @@ C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\res\draw
 C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\res\drawable\icons8_insert_equation_96.png
 C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\res\drawable\icons8_right_96.png
 C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\res\drawable\icons8_santa_hat_96.png
+C:\Users\Joseph\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\res\drawable\_20231216_031503071_ios.png

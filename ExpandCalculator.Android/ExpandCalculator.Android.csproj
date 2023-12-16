@@ -85,6 +85,7 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\_20231216_031503071_iOS.png" />
     <AndroidResource Include="Resources\drawable\Expand_Calculator_Icon.png" />
     <AndroidResource Include="Resources\drawable\icons8_about_96.png" />
     <AndroidResource Include="Resources\drawable\icons8_border_bottom_96.png" />
