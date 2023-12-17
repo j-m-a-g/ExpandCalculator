@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "QIcRudjoXXcsWXfU/ZmgP74Anac1e+ZxkyF9X06f5+xagUcI5+GTSzGPHe+iYAtOIacYfEnQKpgj3hNoloESFA==",
+  "dgSpecHash": "G2IAKvxiTpWfNBdG3/xPfVKHleNeo3B0Fn7LQhoYVm01hoNDLkDhSxGArpV5qhf5+EOhkiy2sXyJoFd5MC9ciw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Joseph\\ExpandCalculator\\ExpandCalculator.Android\\ExpandCalculator.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Joseph\\.nuget\\packages\\plugin.materialdesigncontrols\\3.1.0\\plugin.materialdesigncontrols.3.1.0.nupkg.sha512",
     "C:\\Users\\Joseph\\.nuget\\packages\\segmentedcontrol.formsplugin\\2.0.1\\segmentedcontrol.formsplugin.2.0.1.nupkg.sha512",
     "C:\\Users\\Joseph\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Joseph\\.nuget\\packages\\xam.plugin.simpleaudioplayer\\1.6.0\\xam.plugin.simpleaudioplayer.1.6.0.nupkg.sha512",
     "C:\\Users\\Joseph\\.nuget\\packages\\xamanimation\\1.3.0\\xamanimation.1.3.0.nupkg.sha512",
     "C:\\Users\\Joseph\\.nuget\\packages\\xamarin.androidx.activity\\1.6.1\\xamarin.androidx.activity.1.6.1.nupkg.sha512",
     "C:\\Users\\Joseph\\.nuget\\packages\\xamarin.androidx.annotation\\1.6.0.1\\xamarin.androidx.annotation.1.6.0.1.nupkg.sha512",

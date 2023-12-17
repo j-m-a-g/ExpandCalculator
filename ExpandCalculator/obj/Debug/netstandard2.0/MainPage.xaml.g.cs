@@ -83,6 +83,12 @@ namespace ExpandCalculator {
         private global::Xamarin.Forms.StackLayout VolumeFormulasStackLayout;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.StackLayout SurfaceAreaFormulasStackLayout;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.StackLayout OtherFormulasStackLayout;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.ScrollView AreaCalculator;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -209,6 +215,9 @@ namespace ExpandCalculator {
         private global::Xamarin.Forms.Switch HolidayModeSwitch;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Plugin.MaterialDesignControls.Material3.MaterialButton ClearAllPreferencesButton;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.FlexLayout NavigationFlexLayout;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -257,6 +266,8 @@ namespace ExpandCalculator {
             FormulaReferenceGoButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialButton>(this, "FormulaReferenceGoButton");
             AreaFormulasStackLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "AreaFormulasStackLayout");
             VolumeFormulasStackLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "VolumeFormulasStackLayout");
+            SurfaceAreaFormulasStackLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "SurfaceAreaFormulasStackLayout");
+            OtherFormulasStackLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "OtherFormulasStackLayout");
             AreaCalculator = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ScrollView>(this, "AreaCalculator");
             AreaShapePicker = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialPicker>(this, "AreaShapePicker");
             AreaUnitsChipsGroup = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialChipsGroup>(this, "AreaUnitsChipsGroup");
@@ -299,6 +310,7 @@ namespace ExpandCalculator {
             SettingsStackLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ScrollView>(this, "SettingsStackLayout");
             DarkModeSwitch = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Switch>(this, "DarkModeSwitch");
             HolidayModeSwitch = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Switch>(this, "HolidayModeSwitch");
+            ClearAllPreferencesButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialButton>(this, "ClearAllPreferencesButton");
             NavigationFlexLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.FlexLayout>(this, "NavigationFlexLayout");
             HomeImageButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ImageButton>(this, "HomeImageButton");
             ConversionCalcImageButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ImageButton>(this, "ConversionCalcImageButton");

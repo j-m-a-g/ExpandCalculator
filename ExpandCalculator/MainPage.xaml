@@ -517,6 +517,22 @@
                     
                 </StackLayout>
                 
+                <!--SURFACE AREA FORMULAS-->
+                <StackLayout x:Name="SurfaceAreaFormulasStackLayout"
+                             IsVisible="False">
+                    
+                    
+                    
+                </StackLayout>
+                
+                <!--OTHER FORMULAS-->
+                <StackLayout x:Name="OtherFormulasStackLayout"
+                             IsVisible="False">
+                    
+                    
+                    
+                </StackLayout>
+                
             </StackLayout>
             
         </ScrollView>
@@ -564,9 +580,10 @@
                 </material:MaterialPicker>
                 <material:MaterialChipsGroup x:Name="AreaUnitsChipsGroup"
                     BackgroundColor="Transparent"
-                    BorderColor="#0173b7"
+                    BorderColor="#005395"
                     CornerRadius="10"
                     TextColor="White"
+                    SelectedItem="Yards (yd)"
                     SelectedBackgroundColor="#005395">
                         
                     <material:MaterialChipsGroup.ItemsSource>
@@ -823,6 +840,7 @@
                     TextColor="White"/>
                 <material:MaterialCheckbox x:Name="FirstTimePickerCheckbox"
                     Text="Certain time"
+                    Color="White"
                     TextColor="White"
                     Animation="Fade"
                     IsCheckedChanged="FirstTimePickerCheckbox_IsCheckChanged"/>
@@ -856,6 +874,7 @@
                     FocusedLabelTextColor="White"/>
                 <material:MaterialCheckbox x:Name="SecondTimePickerCheckbox"
                     Text="Certain time"
+                    Color="White"
                     TextColor="White"
                     Animation="Fade"
                     IsCheckedChanged="SecondTimePickerCheckbox_IsCheckedChanged"/>
@@ -967,6 +986,11 @@
             
             <StackLayout>
                 
+                <Image
+                    Source="icons8_settings_96.png"
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    Margin="0, 0, 0, 5"/>
                 <material:MaterialLabel
                     HorizontalOptions="Center"
                     HorizontalTextAlignment="Center"
@@ -1011,6 +1035,12 @@
                             IsToggled="False"/>
                     
                 </Grid>
+                
+                <material:MaterialButton x:Name="ClearAllPreferencesButton"
+                    Text="Clear all preferences"
+                    BackgroundColor="#005395"
+                    Clicked="ClearAllPreferencesButton_OnClicked"
+                    Margin="0, 20, 0, 0"/>
             
             </StackLayout>
             

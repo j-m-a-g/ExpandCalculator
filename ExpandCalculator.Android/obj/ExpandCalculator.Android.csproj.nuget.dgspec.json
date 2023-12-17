@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[2.0.1, )"
             },
+            "Xam.Plugin.SimpleAudioPlayer": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
             "Xamanimation": {
               "target": "Package",
               "version": "[1.3.0, )"
@@ -120,6 +124,10 @@
             "SegmentedControl.FormsPlugin": {
               "target": "Package",
               "version": "[2.0.1, )"
+            },
+            "Xam.Plugin.SimpleAudioPlayer": {
+              "target": "Package",
+              "version": "[1.6.0, )"
             },
             "Xamanimation": {
               "target": "Package",

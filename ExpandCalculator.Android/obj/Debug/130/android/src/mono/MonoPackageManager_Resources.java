@@ -7,6 +7,8 @@ public class MonoPackageManager_Resources {
 		"FormsViewGroup.dll",
 		"Plugin.MaterialDesignControls.Android.dll",
 		"Plugin.MaterialDesignControls.dll",
+		"Plugin.SimpleAudioPlayer.Abstractions.dll",
+		"Plugin.SimpleAudioPlayer.dll",
 		"SegmentedControl.FormsPlugin.Abstractions.dll",
 		"SegmentedControl.FormsPlugin.Android.dll",
 		"Xamanimation.dll",

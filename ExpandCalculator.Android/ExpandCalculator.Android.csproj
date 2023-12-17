@@ -71,6 +71,7 @@
     <PackageReference Include="SegmentedControl.FormsPlugin">
       <Version>2.0.1</Version>
     </PackageReference>
+    <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.6.0" />
     <PackageReference Include="Xamanimation" Version="1.3.0" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2622" />
     <PackageReference Include="Xamarin.Essentials" Version="1.8.0" />
@@ -130,6 +131,9 @@
       <Project>{4E0DB5C3-526E-4F65-937E-93E38A5CABE2}</Project>
       <Name>ExpandCalculator</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\sleigh_bells_sound_fx.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

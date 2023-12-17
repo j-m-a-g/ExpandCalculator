@@ -1,5 +1,6 @@
 ﻿using System;
 using Plugin.MaterialDesignControls.Material3;
+using Plugin.SimpleAudioPlayer;
 using Xamanimation;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -11,12 +12,16 @@ namespace ExpandCalculator
 		/*
 	    GLOBAL FILE VARIABLES
 		 */
-
+		
 		private string _navigationClickedHex = "#005395";
 		private string _navigationUnclickedHex = "#0297df";
 		
+		// New instance of a global audio player for the app
+		ISimpleAudioPlayer _audioPlayer = CrossSimpleAudioPlayer.Current;
+		
 		public MainPage()
 		{
+			
 			InitializeComponent();
 			
 			if (Preferences.ContainsKey("do_not_show_new_feature"))
@@ -34,18 +39,14 @@ namespace ExpandCalculator
 			{
 				NewFeatureIntroScrollView.IsVisible = true;
 				NewFeatureStackViewChild.IsVisible = true;
+				
+				_audioPlayer.Load("sleigh_bells_sound_fx.mp3");
+				_audioPlayer.Play();
 			}
 			
 			OSAppTheme userTheme = Application.Current.RequestedTheme;
 			
-			if (userTheme == OSAppTheme.Dark)
-			{
-				DarkModeSwitch.IsToggled = true;
-			}
-			else
-			{
-				DarkModeSwitch.IsToggled = false;
-			}
+			DarkModeSwitch.IsToggled = userTheme == OSAppTheme.Dark;
 		}
 		
 		// NewFeatureStackLayout event handlers
@@ -64,6 +65,8 @@ namespace ExpandCalculator
 					break;
 				}
 			}
+			
+			_audioPlayer.Stop();
 			
 			WelcomeScrollView.Animate(new FadeInAnimation());
 			WelcomeStackLayout.Animate(new FadeInAnimation());
@@ -104,6 +107,8 @@ namespace ExpandCalculator
 		{
 			ClickedOrUnclicked(VolumeCalcImageButton);
 			SwitchXamlPages(VolumeCalculator);
+			
+			DisplayComingSoonAlert();
 		}
 
 		private void DateCalcImageButton_Clicked(object sender, EventArgs e)
@@ -137,6 +142,17 @@ namespace ExpandCalculator
 				case 1:
 				{
 					SwitchFormulaReferencePages(VolumeFormulasStackLayout);
+					break;
+				}
+				case 2:
+				{
+					SwitchFormulaReferencePages(SurfaceAreaFormulasStackLayout);
+					DisplayComingSoonAlert();
+					break;
+				}
+				case 3:
+				{
+					SwitchFormulaReferencePages(OtherFormulasStackLayout);
 					break;
 				}
 			}
@@ -232,11 +248,6 @@ namespace ExpandCalculator
 				{
 					break;
 				}
-				default:
-				{
-					AreaFirstImage.IsVisible = false;
-					break;
-				}
 			}
 			switch (AreaSecondImage.IsVisible)
 			{
@@ -247,11 +258,6 @@ namespace ExpandCalculator
 				}
 				case false:
 				{
-					break;
-				}
-				default:
-				{
-					AreaSecondImage.IsVisible = false;
 					break;
 				}
 			}
@@ -317,11 +323,6 @@ namespace ExpandCalculator
 				{
 					break;
 				}
-				default:
-				{
-					AreaFirstImage.IsVisible = false;
-					break;
-				}
 			}
 			switch (AreaSecondImage.IsVisible)
 			{
@@ -332,11 +333,6 @@ namespace ExpandCalculator
 				}
 				case false:
 				{
-					break;
-				}
-				default:
-				{
-					AreaSecondImage.IsVisible = false;
 					break;
 				}
 			}
@@ -413,11 +409,6 @@ namespace ExpandCalculator
 				{
 					break;
 				}
-				default:
-				{
-					AreaFirstImage.IsVisible = false;
-					break;
-				}
 			}
 			switch (AreaSecondImage.IsVisible)
 			{
@@ -430,11 +421,6 @@ namespace ExpandCalculator
 				{
 					break;
 				}
-				default:
-				{
-					AreaSecondImage.IsVisible = false;
-					break;
-				}
 			}
 			switch (AreaThirdImage.IsVisible)
 			{
@@ -445,11 +431,6 @@ namespace ExpandCalculator
 				}
 				case false:
 				{
-					break;
-				}
-				default:
-				{
-					AreaThirdImage.IsVisible = false;
 					break;
 				}
 			}
@@ -545,11 +526,6 @@ namespace ExpandCalculator
 				{
 					break;
 				}
-				default:
-				{
-					AreaResultLabel.IsVisible = false;
-					break;
-				}
 			}
 
 			// Checks if CircleDiagramsGrid is visible or not
@@ -581,11 +557,6 @@ namespace ExpandCalculator
 				}
 				case false:
 				{
-					break;
-				}
-				default:
-				{
-					CircleDiagramsGrid.IsVisible = false;
 					break;
 				}
 			}
@@ -662,11 +633,6 @@ namespace ExpandCalculator
 					break;
 				}
 				case false:
-				{
-					DateResultLabel.IsVisible = true;
-					break;
-				}
-				default:
 				{
 					DateResultLabel.IsVisible = true;
 					break;
@@ -780,8 +746,16 @@ namespace ExpandCalculator
 		// About page event handlers
 		private async void ExpandUpdateButton_OnClicked(object sender, EventArgs e)
 		{
-			string url = ExpandUpdateButton.ClassId;
-			await Browser.OpenAsync(url);
+			if (Connectivity.NetworkAccess == NetworkAccess.Internet)
+			{
+				string url = ExpandUpdateButton.ClassId;
+				await Browser.OpenAsync(url);
+			}
+			else
+			{
+				await DisplayAlert("No Internet",
+					"Sorry, but currently you do not have internet access. Please try again later.", "Ok");
+			}
 		}
 
 		// Settings page event handlers
@@ -815,9 +789,20 @@ namespace ExpandCalculator
 			}
 		}
 		
+		private void ClearAllPreferencesButton_OnClicked(object sender, EventArgs e)
+		{
+			DisplayAlert("Clear All Preferences", "All the app's preferences have now been cleared.", "Ok");
+			Preferences.Clear();
+		}
+		
 		/*
 		 UNDERLYING PROGRAM METHODS AND FUNCTIONS
 		 */
+
+		private void DisplayComingSoonAlert()
+		{
+			DisplayAlert("Coming Soon", "This feature is not done yet", "Ok");
+		}
 		
 		private void ViewTimePickersForDateCalc(MaterialTimePicker timePicker, bool visibility)
 		{
@@ -928,8 +913,19 @@ namespace ExpandCalculator
 			AboutStackLayout.IsVisible = false;
 			SettingsStackLayout.IsVisible = false;
 
-			visiblePage.Animate(new FadeInAnimation());
-			visiblePage.IsVisible = true;
+			switch (visiblePage.IsVisible)
+			{
+				case true:
+				{
+					break;
+				}
+				case false:
+				{
+					visiblePage.IsVisible = true;
+					visiblePage.Animate(new FadeInAnimation());
+					break;
+				}
+			}
 		}
 
 		private void CheckUnitSelection()
@@ -948,8 +944,13 @@ namespace ExpandCalculator
 			
 			DateCalcFirstDatePicker.BackgroundColor = Color.FromHex(darkAccent2);
 			DateCalcSecondDatePicker.BackgroundColor = Color.FromHex(darkAccent2);
+			DateCalcFirstDatePicker.FocusedBackgroundColor = Color.FromHex(darkAccent2);
+			DateCalcSecondDatePicker.FocusedBackgroundColor = Color.FromHex(darkAccent2);
+			
 			FirstDatePickerTime.BackgroundColor = Color.FromHex(darkAccent2);
 			SecondDatePickerTime.BackgroundColor = Color.FromHex(darkAccent2);
+			FirstDatePickerTime.FocusedBackgroundColor = Color.FromHex(darkAccent2);
+			SecondDatePickerTime.FocusedBackgroundColor = Color.FromHex(darkAccent2);
 			
 			AreaShapePicker.BackgroundColor = Color.FromHex(darkAccent2);
 			AreaShapePicker.FocusedBackgroundColor = Color.FromHex(darkAccent2);
@@ -960,14 +961,16 @@ namespace ExpandCalculator
 			ImageButton3.BackgroundColor = Color.FromHex(darkAccent3);
 			ImageButton4.BackgroundColor = Color.FromHex(darkAccent3);
 			
-			
 			CalculateSquareAreaButton.BackgroundColor = Color.FromHex(darkAccent3);
 			CalculateTriangleAreaButton.BackgroundColor = Color.FromHex(darkAccent3);
 			CalculateCircleAreaButton.BackgroundColor = Color.FromHex(darkAccent3);
 			CalculateTrapezoidAreaButton.BackgroundColor = Color.FromHex(darkAccent3);
 			DateCalcDifferenceButton.BackgroundColor = Color.FromHex(darkAccent3);
+			ClearAllPreferencesButton.BackgroundColor = Color.FromHex(darkAccent3);
+			FormulaReferenceGoButton.BackgroundColor = Color.FromHex(darkAccent3);
 			
 			AreaUnitsChipsGroup.BorderColor = Color.FromHex(darkAccent3);
+			AreaUnitsChipsGroup.SelectedBackgroundColor = Color.FromHex(darkAccent3);
 			
 			ExpandUpdateButton.BorderColor = Color.FromHex(darkAccent3);
 			
@@ -1010,6 +1013,10 @@ namespace ExpandCalculator
 			CalculateCircleAreaButton.BackgroundColor = Color.FromHex(lightAccent1);
 			CalculateTrapezoidAreaButton.BackgroundColor = Color.FromHex(lightAccent1);
 			DateCalcDifferenceButton.BackgroundColor = Color.FromHex(lightAccent1);
+			ClearAllPreferencesButton.BackgroundColor = Color.FromHex(lightAccent1);
+			FormulaReferenceGoButton.BackgroundColor = Color.FromHex(lightAccent1);
+			AreaUnitsChipsGroup.BorderColor = Color.FromHex(lightAccent1);
+			AreaUnitsChipsGroup.SelectedBackgroundColor = Color.FromHex(lightAccent1);
 			
 			ExpandUpdateButton.BorderColor = Color.FromHex(lightAccent1);
 			
@@ -1018,8 +1025,13 @@ namespace ExpandCalculator
 			
 			DateCalcFirstDatePicker.BackgroundColor = Color.FromHex(lightAccent2);
 			DateCalcSecondDatePicker.BackgroundColor = Color.FromHex(lightAccent2);
+			DateCalcFirstDatePicker.FocusedBackgroundColor = Color.FromHex(lightAccent2);
+			DateCalcSecondDatePicker.FocusedBackgroundColor = Color.FromHex(lightAccent2);
+			
 			FirstDatePickerTime.BackgroundColor = Color.FromHex(lightAccent2);
 			SecondDatePickerTime.BackgroundColor = Color.FromHex(lightAccent2);
+			FirstDatePickerTime.FocusedBackgroundColor = Color.FromHex(lightAccent2);
+			SecondDatePickerTime.FocusedBackgroundColor = Color.FromHex(lightAccent2);
 			
 			AreaShapePicker.BackgroundColor = Color.FromHex(lightAccent2);
 			AreaShapePicker.FocusedBackgroundColor = Color.FromHex(lightAccent2);
