@@ -35,6 +35,9 @@ namespace ExpandCalculator {
         private global::Plugin.MaterialDesignControls.Material3.MaterialLabel NewFeatureMedium2;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Plugin.MaterialDesignControls.Material3.MaterialCheckbox NoNewFeatureDialogOnNextStartup;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Plugin.MaterialDesignControls.Material3.MaterialButton NewFeatureContinueButton;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -238,6 +241,7 @@ namespace ExpandCalculator {
             NewFeatureTitle = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialLabel>(this, "NewFeatureTitle");
             NewFeatureMedium1 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialLabel>(this, "NewFeatureMedium1");
             NewFeatureMedium2 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialLabel>(this, "NewFeatureMedium2");
+            NoNewFeatureDialogOnNextStartup = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialCheckbox>(this, "NoNewFeatureDialogOnNextStartup");
             NewFeatureContinueButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialButton>(this, "NewFeatureContinueButton");
             WelcomeScrollView = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ScrollView>(this, "WelcomeScrollView");
             WelcomeStackLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "WelcomeStackLayout");

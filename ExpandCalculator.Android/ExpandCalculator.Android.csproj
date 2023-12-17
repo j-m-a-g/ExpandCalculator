@@ -71,6 +71,7 @@
     <PackageReference Include="SegmentedControl.FormsPlugin">
       <Version>2.0.1</Version>
     </PackageReference>
+    <PackageReference Include="Xamanimation" Version="1.3.0" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2622" />
     <PackageReference Include="Xamarin.Essentials" Version="1.8.0" />
   </ItemGroup>
@@ -85,7 +86,6 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\_20231216_031503071_iOS.png" />
     <AndroidResource Include="Resources\drawable\Expand_Calculator_Icon.png" />
     <AndroidResource Include="Resources\drawable\icons8_about_96.png" />
     <AndroidResource Include="Resources\drawable\icons8_border_bottom_96.png" />

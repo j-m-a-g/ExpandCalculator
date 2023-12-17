@@ -47,6 +47,18 @@
           "lib/MonoAndroid10/_._": {}
         }
       },
+      "Xamanimation/1.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.1.0.581479"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamanimation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamanimation.dll": {}
+        }
+      },
       "Xamarin.AndroidX.Activity/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -2276,6 +2288,7 @@
         "dependencies": {
           "Plugin.MaterialDesignControls": "3.1.0",
           "SegmentedControl.FormsPlugin": "2.0.1",
+          "Xamanimation": "1.3.0",
           "Xamarin.Essentials": "1.8.0",
           "Xamarin.Forms": "5.0.0.2622"
         },
@@ -2379,6 +2392,18 @@
         "system.numerics.vectors.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Xamanimation/1.3.0": {
+      "sha512": "CXYLcQulqAL9qxRMecm5P5YXbOWiBGK0mgtV2buyHehLjbj6Hf+EdHs8cqVztrD47/zAiTAz2yDCURRXC8d33Q==",
+      "type": "package",
+      "path": "xamanimation/1.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Xamanimation.dll",
+        "xamanimation.1.3.0.nupkg.sha512",
+        "xamanimation.nuspec"
       ]
     },
     "Xamarin.AndroidX.Activity/1.6.1": {
@@ -4342,6 +4367,7 @@
       "ExpandCalculator >= 1.0.0",
       "Plugin.MaterialDesignControls >= 3.1.0",
       "SegmentedControl.FormsPlugin >= 2.0.1",
+      "Xamanimation >= 1.3.0",
       "Xamarin.Essentials >= 1.8.0",
       "Xamarin.Forms >= 5.0.0.2622"
     ]
@@ -4395,6 +4421,10 @@
           "SegmentedControl.FormsPlugin": {
             "target": "Package",
             "version": "[2.0.1, )"
+          },
+          "Xamanimation": {
+            "target": "Package",
+            "version": "[1.3.0, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",

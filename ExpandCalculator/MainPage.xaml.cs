@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Plugin.MaterialDesignControls.Material3;
+using Xamanimation;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -23,8 +19,24 @@ namespace ExpandCalculator
 		{
 			InitializeComponent();
 			
-			OSAppTheme userTheme = Application.Current.RequestedTheme;
+			if (Preferences.ContainsKey("do_not_show_new_feature"))
+			{
+				NewFeatureIntroScrollView.IsVisible = false;
+				NewFeatureStackViewChild.IsVisible = false;
+				
+				WelcomeScrollView.IsVisible = true;
+				WelcomeStackLayout.IsVisible = true;
+				
+				NavigationInstructionLabel.IsVisible = true;
+				NavigationFlexLayout.IsVisible = true;
+			}
+			else
+			{
+				NewFeatureIntroScrollView.IsVisible = true;
+				NewFeatureStackViewChild.IsVisible = true;
+			}
 			
+			OSAppTheme userTheme = Application.Current.RequestedTheme;
 			
 			if (userTheme == OSAppTheme.Dark)
 			{
@@ -39,6 +51,24 @@ namespace ExpandCalculator
 		// NewFeatureStackLayout event handlers
 		private void NewFeatureContinueButton_OnClicked(object sender, EventArgs e)
 		{
+			switch (NoNewFeatureDialogOnNextStartup.IsChecked)
+			{
+				case true:
+				{
+					Preferences.Set("do_not_show_new_feature", true);
+					break;
+				}
+				case false:
+				{
+					Preferences.Remove("do_not_show_new_feature");
+					break;
+				}
+			}
+			
+			WelcomeScrollView.Animate(new FadeInAnimation());
+			WelcomeStackLayout.Animate(new FadeInAnimation());
+			NavigationFlexLayout.Animate(new FadeInAnimation());
+			
 			NewFeatureStackViewChild.IsVisible = false;
 			NewFeatureIntroScrollView.IsVisible = false;
 			
@@ -888,11 +918,9 @@ namespace ExpandCalculator
 			// "pages," to a false visibility value and then
 			// setting a parameter-based StackLayout component
 			// to have a visibility of true.
-
 			WelcomeScrollView.IsVisible = false;
 			CalcModesGrid.IsVisible = false;
 			NavigationInstructionLabel.IsVisible = false;
-			
 			FormulaReference.IsVisible = false;
 			AreaCalculator.IsVisible = false;
 			VolumeCalculator.IsVisible = false;
@@ -900,6 +928,7 @@ namespace ExpandCalculator
 			AboutStackLayout.IsVisible = false;
 			SettingsStackLayout.IsVisible = false;
 
+			visiblePage.Animate(new FadeInAnimation());
 			visiblePage.IsVisible = true;
 		}
 
