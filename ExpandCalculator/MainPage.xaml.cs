@@ -45,8 +45,15 @@ namespace ExpandCalculator
 			}
 			
 			OSAppTheme userTheme = Application.Current.RequestedTheme;
-			
-			DarkModeSwitch.IsToggled = userTheme == OSAppTheme.Dark;
+
+			if (Preferences.ContainsKey("holiday_mode_activated"))
+			{
+				HolidayModeSwitch.IsToggled = true;
+			}
+			else if (userTheme == OSAppTheme.Dark || Preferences.ContainsKey("dark_mode_activated"))
+			{
+				DarkModeSwitch.IsToggled = true;
+			}
 		}
 		
 		// NewFeatureStackLayout event handlers
@@ -764,11 +771,14 @@ namespace ExpandCalculator
 			HolidayModeSwitch.IsToggled = false;
 			if (DarkModeSwitch.IsToggled)
 			{
+				Preferences.Remove("holiday_mode_activated");
+				Preferences.Set("dark_mode_activated", true);
 				HolidayModeSantaHat.IsVisible = false;
 				EnableDarkMode("#262626", "#434343", "#555555", "#979797");
 			}
 			else
 			{
+				Preferences.Remove("dark_mode_activated");
 				HolidayModeSantaHat.IsVisible = false;
 				DisableDarkMode("#005395", "#0173b7", "#27b1f1", "#4dbef3");
 			}
@@ -779,11 +789,14 @@ namespace ExpandCalculator
 			DarkModeSwitch.IsToggled = false;
 			if (HolidayModeSwitch.IsToggled)
 			{
+				Preferences.Remove("dark_mode_activated");
+				Preferences.Set("holiday_mode_activated", true);
 				HolidayModeSantaHat.IsVisible = true;
 				EnableDarkMode("#ff001e", "#00c000", "#00d400", "#00ff00");
 			}
 			else
 			{
+				Preferences.Remove("holiday_mode_activated");
 				HolidayModeSantaHat.IsVisible = false;
 				DisableDarkMode("#005395", "#0173b7", "#27b1f1", "#4dbef3");
 			}
@@ -887,14 +900,22 @@ namespace ExpandCalculator
 			// desired parameter-based ImageButton to have a BackgroundColor
 			// of a clicked state.
 			HomeImageButton.BackgroundColor = Color.FromHex(_navigationUnclickedHex);
+			HomeImageButton.IsEnabled = true;
 			ConversionCalcImageButton.BackgroundColor = Color.FromHex(_navigationUnclickedHex);
+			ConversionCalcImageButton.IsEnabled = true;
 			AreaCalcImageButton.BackgroundColor = Color.FromHex(_navigationUnclickedHex);
+			AreaCalcImageButton.IsEnabled = true;
 			VolumeCalcImageButton.BackgroundColor = Color.FromHex(_navigationUnclickedHex);
+			VolumeCalcImageButton.IsEnabled = true;
 			DateCalcImageButton.BackgroundColor = Color.FromHex(_navigationUnclickedHex);
+			DateCalcImageButton.IsEnabled = true;
 			AboutImageButton.BackgroundColor = Color.FromHex(_navigationUnclickedHex);
+			AboutImageButton.IsEnabled = true;
 			SettingsImageButton.BackgroundColor = Color.FromHex(_navigationUnclickedHex);
-
+			SettingsImageButton.IsEnabled = true;
+			
 			clicked.BackgroundColor = Color.FromHex(_navigationClickedHex);
+			clicked.IsEnabled = false;
 		}
 		
 		private void SwitchXamlPages(ScrollView visiblePage)
@@ -912,20 +933,9 @@ namespace ExpandCalculator
 			DateCalculator.IsVisible = false;
 			AboutStackLayout.IsVisible = false;
 			SettingsStackLayout.IsVisible = false;
-
-			switch (visiblePage.IsVisible)
-			{
-				case true:
-				{
-					break;
-				}
-				case false:
-				{
-					visiblePage.IsVisible = true;
-					visiblePage.Animate(new FadeInAnimation());
-					break;
-				}
-			}
+			
+			visiblePage.IsVisible = true; 
+			visiblePage.Animate(new FadeInAnimation());
 		}
 
 		private void CheckUnitSelection()
