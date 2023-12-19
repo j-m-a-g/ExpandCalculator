@@ -7,7 +7,8 @@
     xmlns:controls="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
     xmlns:material="clr-namespace:Plugin.MaterialDesignControls.Material3;assembly=Plugin.MaterialDesignControls"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:xamanimation="clr-namespace:Xamanimation;assembly=Xamanimation">
+    xmlns:xamanimation="clr-namespace:Xamanimation;assembly=Xamanimation"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
 
     <StackLayout>
 
@@ -302,7 +303,7 @@
 
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition Width="40" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -323,13 +324,15 @@
                         </controls:SegmentedControl.Children>
 
                     </controls:SegmentedControl>
-                    <material:MaterialButton
+                    <ImageButton
                         BackgroundColor="#005395"
                         Clicked="FormulaReferenceGoButton_OnClicked"
                         Grid.Column="1"
                         Grid.Row="0"
-                        Text="Go"
-                        TrailingIcon="icons8_right_96.png"
+                        HeightRequest="0"
+                        Padding="5"
+                        Source="icons8_right_96.png"
+                        WidthRequest="0"
                         x:Name="FormulaReferenceGoButton" />
 
                 </Grid>
@@ -1063,8 +1066,8 @@
                         Grid.Column="2"
                         Grid.Row="1"
                         IsToggled="False"
-                        OnColor="#005395"
-                        ThumbColor="#0173b7"
+                        OnColor="White"
+                        ThumbColor="White"
                         Toggled="DarkModeSwitch_OnToggled"
                         x:Name="DarkModeSwitch" />
                     <material:MaterialLabel
@@ -1077,8 +1080,8 @@
                         Grid.Column="2"
                         Grid.Row="2"
                         IsToggled="False"
-                        OnColor="#005395"
-                        ThumbColor="#0173b7"
+                        OnColor="White"
+                        ThumbColor="White"
                         Toggled="HolidayModeSwitch_OnToggled"
                         x:Name="HolidayModeSwitch" />
 
@@ -1114,7 +1117,8 @@
                 Margin="0,0,10,0"
                 Padding="10"
                 Source="icons8_home_384.png"
-                x:Name="HomeImageButton" />
+                x:Name="HomeImageButton"
+                xct:ShadowEffect.Color="White" />
             <ImageButton
                 Aspect="AspectFit"
                 BackgroundColor="#0297df"

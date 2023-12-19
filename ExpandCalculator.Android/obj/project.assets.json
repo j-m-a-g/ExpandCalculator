@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v13.0": {
-      "Plugin.MaterialDesignControls/3.1.0": {
+      "Plugin.MaterialDesignControls/3.1.1": {
         "type": "package",
         "dependencies": {
           "Xamarin.Forms": "5.0.0.1874"
@@ -1959,7 +1959,42 @@
           "buildTransitive/monoandroid90/Xamarin.AndroidX.ViewPager2.targets": {}
         }
       },
-      "Xamarin.Essentials/1.8.0": {
+      "Xamarin.CommunityToolkit/2.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2291"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/Xamarin.CommunityToolkit.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/monoandroid10.0/Xamarin.CommunityToolkit.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Xamarin.CommunityToolkit.Markup/2.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2291"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.Markup.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.Markup.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Xamarin.Essentials/1.8.1": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0",
@@ -2305,11 +2340,13 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Plugin.MaterialDesignControls": "3.1.0",
+          "Plugin.MaterialDesignControls": "3.1.1",
           "SegmentedControl.FormsPlugin": "2.0.1",
           "Xam.Plugin.SimpleAudioPlayer": "1.6.0",
           "Xamanimation": "1.3.0",
-          "Xamarin.Essentials": "1.8.0",
+          "Xamarin.CommunityToolkit": "2.0.6",
+          "Xamarin.CommunityToolkit.Markup": "2.0.6",
+          "Xamarin.Essentials": "1.8.1",
           "Xamarin.Forms": "5.0.0.2622"
         },
         "compile": {
@@ -2322,10 +2359,10 @@
     }
   },
   "libraries": {
-    "Plugin.MaterialDesignControls/3.1.0": {
-      "sha512": "71H46WgUd/fC09eg2CKOMnTUyifZkltZU4JwmGjnL7zLEMFA1OijJ5FYgqtLA5OqdspuQ8vxEULdAwnQD6Ep4A==",
+    "Plugin.MaterialDesignControls/3.1.1": {
+      "sha512": "zlZUNo7iHsYVrKO1mqpxl3ISEBRrNNlUcnkcE7xuys+lRF8xwRCI7QCtjV2mVC7VUkI5KaTt6GhiAy85y0zshA==",
       "type": "package",
-      "path": "plugin.materialdesigncontrols/3.1.0",
+      "path": "plugin.materialdesigncontrols/3.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2340,7 +2377,7 @@
         "lib/Xamarin.iOS10/Plugin.MaterialDesignControls.xml",
         "lib/netstandard1.0/Plugin.MaterialDesignControls.dll",
         "lib/netstandard1.0/Plugin.MaterialDesignControls.xml",
-        "plugin.materialdesigncontrols.3.1.0.nupkg.sha512",
+        "plugin.materialdesigncontrols.3.1.1.nupkg.sha512",
         "plugin.materialdesigncontrols.nuspec"
       ]
     },
@@ -3963,10 +4000,68 @@
         "xamarin.androidx.viewpager2.nuspec"
       ]
     },
-    "Xamarin.Essentials/1.8.0": {
-      "sha512": "g1yB0CkX7BVOx84P0SLm8guypbEfigqjddZsI9KgJzba6yRRcekBqDp6YTT1hO8ZcFcW8VZbsymejTJftJoQyg==",
+    "Xamarin.CommunityToolkit/2.0.6": {
+      "sha512": "viJ5AjiVtT6sWxRinNDVuH9XxRKxYfQN7D9Z2zYvXMMjsdo3QX7/vd/kMJeLw0bozwIDONBKGmmEK/iohFL6wg==",
       "type": "package",
-      "path": "xamarin.essentials/1.8.0",
+      "path": "xamarin.communitytoolkit/2.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "analyzers/dotnet/xct/cs/Xamarin.CommunityToolkit.SourceGenerator.dll",
+        "icon.png",
+        "lib/monoandroid10.0/Xamarin.CommunityToolkit.dll",
+        "lib/monoandroid10.0/Xamarin.CommunityToolkit.xml",
+        "lib/net471/Xamarin.CommunityToolkit.dll",
+        "lib/net471/Xamarin.CommunityToolkit.xml",
+        "lib/net472/Xamarin.CommunityToolkit.dll",
+        "lib/net472/Xamarin.CommunityToolkit.xml",
+        "lib/netcoreapp3.1/Xamarin.CommunityToolkit.dll",
+        "lib/netcoreapp3.1/Xamarin.CommunityToolkit.xml",
+        "lib/netstandard1.0/Xamarin.CommunityToolkit.dll",
+        "lib/netstandard1.0/Xamarin.CommunityToolkit.xml",
+        "lib/netstandard2.0/Xamarin.CommunityToolkit.dll",
+        "lib/netstandard2.0/Xamarin.CommunityToolkit.xml",
+        "lib/netstandard2.1/Xamarin.CommunityToolkit.dll",
+        "lib/netstandard2.1/Xamarin.CommunityToolkit.xml",
+        "lib/tizen40/Xamarin.CommunityToolkit.dll",
+        "lib/tizen40/Xamarin.CommunityToolkit.xml",
+        "lib/uap10.0.18362/Xamarin.CommunityToolkit.dll",
+        "lib/uap10.0.18362/Xamarin.CommunityToolkit.pri",
+        "lib/uap10.0.18362/Xamarin.CommunityToolkit.xml",
+        "lib/xamarinios10/Xamarin.CommunityToolkit.dll",
+        "lib/xamarinios10/Xamarin.CommunityToolkit.xml",
+        "lib/xamarinmac20/Xamarin.CommunityToolkit.dll",
+        "lib/xamarinmac20/Xamarin.CommunityToolkit.xml",
+        "lib/xamarintvos10/Xamarin.CommunityToolkit.dll",
+        "lib/xamarintvos10/Xamarin.CommunityToolkit.xml",
+        "lib/xamarinwatchos10/Xamarin.CommunityToolkit.dll",
+        "lib/xamarinwatchos10/Xamarin.CommunityToolkit.xml",
+        "xamarin.communitytoolkit.2.0.6.nupkg.sha512",
+        "xamarin.communitytoolkit.nuspec"
+      ]
+    },
+    "Xamarin.CommunityToolkit.Markup/2.0.6": {
+      "sha512": "PZIerP1h7LmspiLI99DzGb6CxHrMRej0gUrtYWCOF+v/xXvJYIqY8jodFkjcSBqtfRMj60siEUvJcWOpulLmYQ==",
+      "type": "package",
+      "path": "xamarin.communitytoolkit.markup/2.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/netstandard1.0/Xamarin.CommunityToolkit.Markup.dll",
+        "lib/netstandard1.0/Xamarin.CommunityToolkit.Markup.xml",
+        "lib/netstandard2.0/Xamarin.CommunityToolkit.Markup.dll",
+        "lib/netstandard2.0/Xamarin.CommunityToolkit.Markup.xml",
+        "xamarin.communitytoolkit.markup.2.0.6.nupkg.sha512",
+        "xamarin.communitytoolkit.markup.nuspec"
+      ]
+    },
+    "Xamarin.Essentials/1.8.1": {
+      "sha512": "IzfRGrCrRuytgdQU+Im17Cepib6qUyLj1xfMjn+sDPTfmhmcZotsQCm5Dblm4Vxo9/SGFTdm1OgJUKWzu+dfjw==",
+      "type": "package",
+      "path": "xamarin.essentials/1.8.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4001,7 +4096,7 @@
         "lib/xamarinwatchos10/Xamarin.Essentials.pdb",
         "lib/xamarinwatchos10/Xamarin.Essentials.xml",
         "readme.txt",
-        "xamarin.essentials.1.8.0.nupkg.sha512",
+        "xamarin.essentials.1.8.1.nupkg.sha512",
         "xamarin.essentials.nuspec"
       ]
     },
@@ -4432,11 +4527,13 @@
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v13.0": [
       "ExpandCalculator >= 1.0.0",
-      "Plugin.MaterialDesignControls >= 3.1.0",
+      "Plugin.MaterialDesignControls >= 3.1.1",
       "SegmentedControl.FormsPlugin >= 2.0.1",
       "Xam.Plugin.SimpleAudioPlayer >= 1.6.0",
       "Xamanimation >= 1.3.0",
-      "Xamarin.Essentials >= 1.8.0",
+      "Xamarin.CommunityToolkit >= 2.0.6",
+      "Xamarin.CommunityToolkit.Markup >= 2.0.6",
+      "Xamarin.Essentials >= 1.8.1",
       "Xamarin.Forms >= 5.0.0.2622"
     ]
   },
@@ -4484,7 +4581,7 @@
         "dependencies": {
           "Plugin.MaterialDesignControls": {
             "target": "Package",
-            "version": "[3.1.0, )"
+            "version": "[3.1.1, )"
           },
           "SegmentedControl.FormsPlugin": {
             "target": "Package",
@@ -4498,9 +4595,17 @@
             "target": "Package",
             "version": "[1.3.0, )"
           },
+          "Xamarin.CommunityToolkit": {
+            "target": "Package",
+            "version": "[2.0.6, )"
+          },
+          "Xamarin.CommunityToolkit.Markup": {
+            "target": "Package",
+            "version": "[2.0.6, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
-            "version": "[1.8.0, )"
+            "version": "[1.8.1, )"
           },
           "Xamarin.Forms": {
             "target": "Package",

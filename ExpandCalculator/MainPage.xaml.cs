@@ -4,10 +4,11 @@ using Plugin.SimpleAudioPlayer;
 using Xamanimation;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.CommunityToolkit.Effects;
 
 namespace ExpandCalculator
 {
-	public partial class MainPage : ContentPage
+	public partial class MainPage
 	{
 		/*
 	    GLOBAL FILE VARIABLES
@@ -40,7 +41,7 @@ namespace ExpandCalculator
 				NewFeatureIntroScrollView.IsVisible = true;
 				NewFeatureStackViewChild.IsVisible = true;
 				
-				_audioPlayer.Load("sleigh_bells_sound_fx.mp3");
+				_audioPlayer.Load("jingle_bell_rock.mp3");
 				_audioPlayer.Play();
 			}
 			
@@ -901,20 +902,34 @@ namespace ExpandCalculator
 			// of a clicked state.
 			HomeImageButton.BackgroundColor = Color.FromHex(_navigationUnclickedHex);
 			HomeImageButton.IsEnabled = true;
+			ShadowEffect.SetColor(HomeImageButton, Color.Transparent);
+			
 			ConversionCalcImageButton.BackgroundColor = Color.FromHex(_navigationUnclickedHex);
 			ConversionCalcImageButton.IsEnabled = true;
+			ShadowEffect.SetColor(ConversionCalcImageButton, Color.Transparent);
+			
 			AreaCalcImageButton.BackgroundColor = Color.FromHex(_navigationUnclickedHex);
 			AreaCalcImageButton.IsEnabled = true;
+			ShadowEffect.SetColor(AreaCalcImageButton, Color.Transparent);
+			
 			VolumeCalcImageButton.BackgroundColor = Color.FromHex(_navigationUnclickedHex);
 			VolumeCalcImageButton.IsEnabled = true;
+			ShadowEffect.SetColor(VolumeCalcImageButton, Color.Transparent);
+			
 			DateCalcImageButton.BackgroundColor = Color.FromHex(_navigationUnclickedHex);
 			DateCalcImageButton.IsEnabled = true;
+			ShadowEffect.SetColor(DateCalcImageButton, Color.Transparent);
+			
 			AboutImageButton.BackgroundColor = Color.FromHex(_navigationUnclickedHex);
 			AboutImageButton.IsEnabled = true;
+			ShadowEffect.SetColor(AboutImageButton, Color.Transparent);
+			
 			SettingsImageButton.BackgroundColor = Color.FromHex(_navigationUnclickedHex);
 			SettingsImageButton.IsEnabled = true;
+			ShadowEffect.SetColor(SettingsImageButton, Color.Transparent);
 			
 			clicked.BackgroundColor = Color.FromHex(_navigationClickedHex);
+			ShadowEffect.SetColor(clicked, Color.White);
 			clicked.IsEnabled = false;
 		}
 		
@@ -945,10 +960,16 @@ namespace ExpandCalculator
 				AreaErrorLabel.IsVisible = true;
 			}
 		}
-
+		
 		private void EnableDarkMode(string darkBackgroundAccent, string darkAccent2, string darkAccent3, string darkAccent4)
 		{
+			_navigationClickedHex = darkAccent3;
+			_navigationUnclickedHex = darkBackgroundAccent;
+			UpdateNavigationImageButtons();
+
+
 			ExpandCalcMain.BackgroundColor = Color.FromHex(darkBackgroundAccent);
+			
 			
 			NavigationFlexLayout.BackgroundColor = Color.FromHex(darkAccent2);
 			
@@ -1011,9 +1032,34 @@ namespace ExpandCalculator
 			CircleRadiusDiameterEntry.BackgroundColor = Color.FromHex(darkAccent4);
 			CircleRadiusDiameterEntry.FocusedBackgroundColor = Color.FromHex(darkAccent4);
 		}
-		
+
+		private void UpdateNavigationImageButtons()
+		{
+			switch (NewFeatureIntroScrollView.IsVisible || NewFeatureStackViewChild.IsVisible)
+			{
+				case true:
+				{
+					AboutImageButton.SendClicked();
+					HomeImageButton.SendClicked();
+					WelcomeScrollView.IsVisible = false;
+					WelcomeStackLayout.IsVisible = false;
+					break;
+				}
+				case false:
+				{
+					AboutImageButton.SendClicked();
+					SettingsImageButton.SendClicked();
+					break;
+				}
+			}
+		}
+
 		private void DisableDarkMode(string lightAccent1, string lightAccent2, string lightAccent3, string lightAccent4)
 		{
+			_navigationClickedHex = "#005395";
+			_navigationUnclickedHex = "#0297df";
+			UpdateNavigationImageButtons();
+			
 			ExpandCalcMain.BackgroundColor = Color.FromHex("#0297df");
 			
 			

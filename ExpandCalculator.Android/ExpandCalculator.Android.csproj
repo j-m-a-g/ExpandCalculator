@@ -66,15 +66,17 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Plugin.MaterialDesignControls">
-      <Version>3.1.0</Version>
+      <Version>3.1.1</Version>
     </PackageReference>
     <PackageReference Include="SegmentedControl.FormsPlugin">
       <Version>2.0.1</Version>
     </PackageReference>
     <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.6.0" />
     <PackageReference Include="Xamanimation" Version="1.3.0" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.6" />
+    <PackageReference Include="Xamarin.CommunityToolkit.Markup" Version="2.0.6" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2622" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.8.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -133,7 +135,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\sleigh_bells_sound_fx.mp3" />
+    <AndroidAsset Include="Assets\jingle_bell_rock.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "G2IAKvxiTpWfNBdG3/xPfVKHleNeo3B0Fn7LQhoYVm01hoNDLkDhSxGArpV5qhf5+EOhkiy2sXyJoFd5MC9ciw==",
+  "dgSpecHash": "JP6EUccPlbqu/hTd1TEPBL97WUw8rbhCJUi4QpSEBvIZ5fzlnia951Ks4Ieu5b4oX9SrDNOwbrXu1nOzpbDmBg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Joseph\\ExpandCalculator\\ExpandCalculator.Android\\ExpandCalculator.Android.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Joseph\\.nuget\\packages\\plugin.materialdesigncontrols\\3.1.0\\plugin.materialdesigncontrols.3.1.0.nupkg.sha512",
+    "C:\\Users\\Joseph\\.nuget\\packages\\plugin.materialdesigncontrols\\3.1.1\\plugin.materialdesigncontrols.3.1.1.nupkg.sha512",
     "C:\\Users\\Joseph\\.nuget\\packages\\segmentedcontrol.formsplugin\\2.0.1\\segmentedcontrol.formsplugin.2.0.1.nupkg.sha512",
     "C:\\Users\\Joseph\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Joseph\\.nuget\\packages\\xam.plugin.simpleaudioplayer\\1.6.0\\xam.plugin.simpleaudioplayer.1.6.0.nupkg.sha512",
@@ -69,7 +69,9 @@
     "C:\\Users\\Joseph\\.nuget\\packages\\xamarin.androidx.versionedparcelable\\1.1.1.17\\xamarin.androidx.versionedparcelable.1.1.1.17.nupkg.sha512",
     "C:\\Users\\Joseph\\.nuget\\packages\\xamarin.androidx.viewpager\\1.0.0.15\\xamarin.androidx.viewpager.1.0.0.15.nupkg.sha512",
     "C:\\Users\\Joseph\\.nuget\\packages\\xamarin.androidx.viewpager2\\1.0.0.10\\xamarin.androidx.viewpager2.1.0.0.10.nupkg.sha512",
-    "C:\\Users\\Joseph\\.nuget\\packages\\xamarin.essentials\\1.8.0\\xamarin.essentials.1.8.0.nupkg.sha512",
+    "C:\\Users\\Joseph\\.nuget\\packages\\xamarin.communitytoolkit\\2.0.6\\xamarin.communitytoolkit.2.0.6.nupkg.sha512",
+    "C:\\Users\\Joseph\\.nuget\\packages\\xamarin.communitytoolkit.markup\\2.0.6\\xamarin.communitytoolkit.markup.2.0.6.nupkg.sha512",
+    "C:\\Users\\Joseph\\.nuget\\packages\\xamarin.essentials\\1.8.1\\xamarin.essentials.1.8.1.nupkg.sha512",
     "C:\\Users\\Joseph\\.nuget\\packages\\xamarin.forms\\5.0.0.2622\\xamarin.forms.5.0.0.2622.nupkg.sha512",
     "C:\\Users\\Joseph\\.nuget\\packages\\xamarin.google.android.material\\1.4.0.2\\xamarin.google.android.material.1.4.0.2.nupkg.sha512",
     "C:\\Users\\Joseph\\.nuget\\packages\\xamarin.google.guava.listenablefuture\\1.0.0.12\\xamarin.google.guava.listenablefuture.1.0.0.12.nupkg.sha512",

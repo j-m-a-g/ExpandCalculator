@@ -74,7 +74,7 @@ namespace ExpandCalculator {
         private global::SegmentedControl.FormsPlugin.Abstractions.SegmentedControl FormulaReferenceSegmentedControl;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Plugin.MaterialDesignControls.Material3.MaterialButton FormulaReferenceGoButton;
+        private global::Xamarin.Forms.ImageButton FormulaReferenceGoButton;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.StackLayout AreaFormulasStackLayout;
@@ -263,7 +263,7 @@ namespace ExpandCalculator {
             NavigationInstructionLabel = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialLabel>(this, "NavigationInstructionLabel");
             FormulaReference = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ScrollView>(this, "FormulaReference");
             FormulaReferenceSegmentedControl = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::SegmentedControl.FormsPlugin.Abstractions.SegmentedControl>(this, "FormulaReferenceSegmentedControl");
-            FormulaReferenceGoButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Plugin.MaterialDesignControls.Material3.MaterialButton>(this, "FormulaReferenceGoButton");
+            FormulaReferenceGoButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ImageButton>(this, "FormulaReferenceGoButton");
             AreaFormulasStackLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "AreaFormulasStackLayout");
             VolumeFormulasStackLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "VolumeFormulasStackLayout");
             SurfaceAreaFormulasStackLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "SurfaceAreaFormulasStackLayout");
