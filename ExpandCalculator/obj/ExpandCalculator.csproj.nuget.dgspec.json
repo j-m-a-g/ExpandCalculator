@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Joseph\\ExpandCalculator\\ExpandCalculator\\ExpandCalculator.csproj": {}
+    "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\ExpandCalculator\\ExpandCalculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Joseph\\ExpandCalculator\\ExpandCalculator\\ExpandCalculator.csproj": {
+    "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\ExpandCalculator\\ExpandCalculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Joseph\\ExpandCalculator\\ExpandCalculator\\ExpandCalculator.csproj",
+        "projectUniqueName": "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\ExpandCalculator\\ExpandCalculator.csproj",
         "projectName": "ExpandCalculator",
-        "projectPath": "C:\\Users\\Joseph\\ExpandCalculator\\ExpandCalculator\\ExpandCalculator.csproj",
+        "projectPath": "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\ExpandCalculator\\ExpandCalculator.csproj",
         "packagesPath": "C:\\Users\\Joseph\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Joseph\\ExpandCalculator\\ExpandCalculator\\obj\\",
+        "outputPath": "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\ExpandCalculator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -95,7 +95,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

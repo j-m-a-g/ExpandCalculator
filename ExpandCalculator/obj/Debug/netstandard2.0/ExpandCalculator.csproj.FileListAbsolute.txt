@@ -16,3 +16,16 @@ C:\Users\Joseph\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\Expan
 C:\Users\Joseph\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.sourcelink.json
 C:\Users\Joseph\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.Properties.Resources.resources
 C:\Users\Joseph\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.csproj.GenerateResource.cache
+C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.csproj.AssemblyReference.cache
+C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.Properties.Resources.resources
+C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.csproj.GenerateResource.cache
+C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.AssemblyInfoInputs.cache
+C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.AssemblyInfo.cs
+C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.csproj.CoreCompileInputs.cache
+C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.sourcelink.json
+C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.dll
+C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\refint\ExpandCalculator.dll
+C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator\obj\Debug\netstandard2.0\ExpandCalculator.pdb

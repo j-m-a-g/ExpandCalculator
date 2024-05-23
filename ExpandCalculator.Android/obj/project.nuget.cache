@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JP6EUccPlbqu/hTd1TEPBL97WUw8rbhCJUi4QpSEBvIZ5fzlnia951Ks4Ieu5b4oX9SrDNOwbrXu1nOzpbDmBg==",
+  "dgSpecHash": "p3AQcILxxj2c73dI7aPMtMnP4BA7SHvCM7CLgcw0iwQTaWkPI3QBU9hIK5yuV4+HuYtxRN9HVzP3BIpq+op08Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Joseph\\ExpandCalculator\\ExpandCalculator.Android\\ExpandCalculator.Android.csproj",
+  "projectFilePath": "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\ExpandCalculator.Android\\ExpandCalculator.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Joseph\\.nuget\\packages\\plugin.materialdesigncontrols\\3.1.1\\plugin.materialdesigncontrols.3.1.1.nupkg.sha512",
     "C:\\Users\\Joseph\\.nuget\\packages\\segmentedcontrol.formsplugin\\2.0.1\\segmentedcontrol.formsplugin.2.0.1.nupkg.sha512",

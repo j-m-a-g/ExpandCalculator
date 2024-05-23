@@ -4544,11 +4544,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Joseph\\ExpandCalculator\\ExpandCalculator.Android\\ExpandCalculator.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\ExpandCalculator.Android\\ExpandCalculator.Android.csproj",
       "projectName": "ExpandCalculator.Android",
-      "projectPath": "C:\\Users\\Joseph\\ExpandCalculator\\ExpandCalculator.Android\\ExpandCalculator.Android.csproj",
+      "projectPath": "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\ExpandCalculator.Android\\ExpandCalculator.Android.csproj",
       "packagesPath": "C:\\Users\\Joseph\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Joseph\\ExpandCalculator\\ExpandCalculator.Android\\obj\\",
+      "outputPath": "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\ExpandCalculator.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -4569,8 +4569,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "C:\\Users\\Joseph\\ExpandCalculator\\ExpandCalculator\\ExpandCalculator.csproj": {
-              "projectPath": "C:\\Users\\Joseph\\ExpandCalculator\\ExpandCalculator\\ExpandCalculator.csproj"
+            "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\ExpandCalculator\\ExpandCalculator.csproj": {
+              "projectPath": "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\ExpandCalculator\\ExpandCalculator.csproj"
             }
           }
         }

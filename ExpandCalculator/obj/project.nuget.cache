@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xOc+QheX8u3lNY3KHaukLv4BCBRRgn34NzfBoCsyumC0h5ysxgnY6NAzYV6g9+mcmCJWNGI6307AQ1pWqRTaNg==",
+  "dgSpecHash": "VdmyBdFzImvDdMj7BxeVai0Ubdv0Z+aTjBEZBJy8Gvqt9xs8Rcgof69JTtWSNC1nFDqMBx1PEO2jtB5TpURB1w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Joseph\\ExpandCalculator\\ExpandCalculator\\ExpandCalculator.csproj",
+  "projectFilePath": "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\ExpandCalculator\\ExpandCalculator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Joseph\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Joseph\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
