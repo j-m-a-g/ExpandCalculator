@@ -2338,7 +2338,7 @@
       },
       "ExpandCalculator/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
+        "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "Plugin.MaterialDesignControls": "3.1.1",
           "SegmentedControl.FormsPlugin": "2.0.1",
@@ -4574,6 +4574,11 @@
             }
           }
         }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {

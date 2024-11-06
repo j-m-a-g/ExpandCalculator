@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{53393E59-5F89-48BB-8DE7-824B286D72F3}|ExpandCalculator\\ExpandCalculator.csproj|c:\\users\\joseph\\xamarinreleaseprojects\\expandcalculator\\expandcalculator\\mainpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{53393E59-5F89-48BB-8DE7-824B286D72F3}|ExpandCalculator\\ExpandCalculator.csproj|solutionrelative:expandcalculator\\mainpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53393E59-5F89-48BB-8DE7-824B286D72F3}|ExpandCalculator\\ExpandCalculator.csproj|c:\\users\\joseph\\xamarinreleaseprojects\\expandcalculator\\expandcalculator\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53393E59-5F89-48BB-8DE7-824B286D72F3}|ExpandCalculator\\ExpandCalculator.csproj|solutionrelative:expandcalculator\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\ExpandCalculator\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "ExpandCalculator\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\ExpandCalculator\\MainPage.xaml.cs",
+              "RelativeToolTip": "ExpandCalculator\\MainPage.xaml.cs",
+              "ViewState": "AgIAACQBAAAAAAAAAAAuwBwBAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T20:31:16.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\ExpandCalculator\\MainPage.xaml",
+              "RelativeDocumentMoniker": "ExpandCalculator\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\ExpandCalculator\\MainPage.xaml",
+              "RelativeToolTip": "ExpandCalculator\\MainPage.xaml",
+              "ViewState": "AgIAAG4CAAAAAAAAAAA2wHkCAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-31T16:43:42.262Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{57ee38e6-028e-3d83-ae4d-669d90022d4b}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }
