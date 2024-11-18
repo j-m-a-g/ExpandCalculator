@@ -43,20 +43,69 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "dependencies": {
+            "Microsoft.NETCore.Platforms": {
+              "target": "Package",
+              "version": "[8.0.0-preview.7.23375.6, )"
+            },
+            "Microsoft.NETCore.Targets": {
+              "target": "Package",
+              "version": "[6.0.0-preview.4.21253.7, )"
+            },
+            "NETStandard.Library": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
             "Plugin.MaterialDesignControls": {
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.8, )"
             },
             "SegmentedControl.FormsPlugin": {
               "target": "Package",
               "version": "[2.0.1, )"
+            },
+            "System.Buffers": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            },
+            "System.Diagnostics.DiagnosticSource": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "System.Memory": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "System.Net.Primitives": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            },
+            "System.Runtime.Extensions": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            },
+            "System.Security.Cryptography.Algorithms": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            },
+            "System.Security.Cryptography.Cng": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Security.Cryptography.OpenSsl": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "Xam.Plugin.SimpleAudioPlayer": {
               "target": "Package",
@@ -80,7 +129,35 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2622, )"
+              "version": "[5.0.0.2662, )"
+            },
+            "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl": {
+              "target": "Package",
+              "version": "[4.3.3, )"
+            },
+            "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl": {
+              "target": "Package",
+              "version": "[4.3.3, )"
+            },
+            "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl": {
+              "target": "Package",
+              "version": "[4.3.3, )"
+            },
+            "runtime.native.System": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            },
+            "runtime.native.System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            },
+            "runtime.native.System.Security.Cryptography.Apple": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            },
+            "runtime.native.System.Security.Cryptography.OpenSsl": {
+              "target": "Package",
+              "version": "[4.3.3, )"
             }
           },
           "imports": [
@@ -99,7 +176,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400-preview.0.24324.5\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11\\RuntimeIdentifierGraph.json"
         }
       }
     }

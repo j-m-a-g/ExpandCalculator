@@ -5,6 +5,7 @@ C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\bin\Debug\com.companyname.expandcalculator-Signed.aab
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\bin\Debug\com.companyname.expandcalculator-Signed.apk
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\bin\Debug\com.companyname.expandcalculator-Signed.apk.idsig
+C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\bin\Debug\mapping.txt
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\bin\Debug\ExpandCalculator.dll
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\bin\Debug\ExpandCalculator.pdb
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\MonoAndroid,Version=v13.0.AssemblyAttributes.cs
@@ -125,6 +126,7 @@ C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\Plugin.SimpleAudioPlayer.dll.mdb
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\SegmentedControl.FormsPlugin.Abstractions.dll
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\SegmentedControl.FormsPlugin.Android.dll
+C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.Buffers.dll
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.ComponentModel.Composition.dll
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.ComponentModel.Composition.pdb
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.Core.dll
@@ -133,6 +135,7 @@ C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.Data.DataSetExtensions.pdb
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.Data.dll
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.Data.pdb
+C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.dll
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.Drawing.Common.dll
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.Drawing.Common.pdb
@@ -141,16 +144,18 @@ C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.IO.Compression.FileSystem.pdb
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.IO.Compression.pdb
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.IO.dll
+C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.Memory.dll
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.Net.Http.dll
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.Net.Http.pdb
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.Numerics.dll
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.Numerics.pdb
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.Numerics.Vectors.dll
-C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.Numerics.Vectors.pdb
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.pdb
+C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.Runtime.dll
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.Runtime.Serialization.dll
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.Runtime.Serialization.pdb
+C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.Security.Cryptography.OpenSsl.dll
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.ServiceModel.Internals.dll
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.ServiceModel.Internals.pdb
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\assets\System.Transactions.dll
@@ -738,6 +743,8 @@ C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\src\mono\com\google\android\material\textfield\TextInputLayout_OnEndIconChangedListenerImplementor.java
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\src\mono\MonoPackageManager_Resources.java
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\src\xamarin\essentials\fileProvider.java
+C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\aapt_rules.txt
+C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\manifest\aapt_rules.txt
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\bin\packaged_resources
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\src\com\companyname\expandcalculator\R.java
 C:\Users\Joseph\XamarinReleaseProjects\ExpandCalculator\ExpandCalculator.Android\obj\Debug\130\android\compressed_assemblies.arm64-v8a.ll

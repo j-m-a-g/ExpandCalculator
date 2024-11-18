@@ -11,6 +11,8 @@ public class MonoPackageManager_Resources {
 		"Plugin.SimpleAudioPlayer.dll",
 		"SegmentedControl.FormsPlugin.Abstractions.dll",
 		"SegmentedControl.FormsPlugin.Android.dll",
+		"System.Diagnostics.DiagnosticSource.dll",
+		"System.Security.Cryptography.OpenSsl.dll",
 		"Xamanimation.dll",
 		"Xamarin.AndroidX.Activity.dll",
 		"Xamarin.AndroidX.Annotation.dll",
