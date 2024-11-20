@@ -1,4 +1,5 @@
 ﻿using Plugin.MaterialDesignControls.Material3;
+using Plugin.SimpleAudioPlayer;
 using System;
 using Xamanimation;
 using Xamarin.CommunityToolkit.Effects;
@@ -183,7 +184,11 @@ namespace ExpandCalculator
 				SquareFirstSideEntry.Placeholder = "Length (l)";
 				SquareSecondSideEntry.Placeholder = "Width (w)";
 
-				ChangeAreaImages(AreaFirstImage, AreaSecondImage, "icons8_border_left_96.png", "icons8_border_bottom_96.png");
+				ChangeAreaImages(
+					AreaFirstImage,
+					AreaSecondImage,
+					"icons8_border_left_96.png",
+					"icons8_border_bottom_96.png");
 
 				SquareFirstSideEntry.Text = "";
 				SquareSecondSideEntry.Text = "";
@@ -194,7 +199,11 @@ namespace ExpandCalculator
 				SquareFirstSideEntry.Placeholder = "Length (l)";
 				SquareSecondSideEntry.Placeholder = "Width (w)";
 
-				ChangeAreaImages(AreaFirstImage, AreaSecondImage, "icons8_border_left_48.png", "icons8_border_bottom_48.png");
+				ChangeAreaImages(
+					AreaFirstImage,
+					AreaSecondImage,
+					"icons8_border_left_48.png",
+					"icons8_border_bottom_48.png");
 
 				SquareFirstSideEntry.Text = "";
 				SquareSecondSideEntry.Text = "";
@@ -203,7 +212,11 @@ namespace ExpandCalculator
 			{
 				ChangeAreaShapeCalculation(TriangleAreaStackLayout);
 
-				ChangeAreaImages(AreaFirstImage, AreaSecondImage, "triangle_base_image.png", "triangle_height_image.png");
+				ChangeAreaImages(
+					AreaFirstImage,
+					AreaSecondImage,
+					"triangle_base_image.png",
+					"triangle_height_image.png");
 			}
 			else if (AreaShapePicker.SelectedIndex == 3)
 			{
@@ -212,7 +225,11 @@ namespace ExpandCalculator
 				SquareFirstSideEntry.Placeholder = "Base (b)";
 				SquareSecondSideEntry.Placeholder = "Height (h)";
 
-				ChangeAreaImages(AreaFirstImage, AreaSecondImage, "parallelogram_base_image.png", "parallelogram_height_image.png");
+				ChangeAreaImages(
+					AreaFirstImage,
+					AreaSecondImage,
+					"parallelogram_base_image.png",
+					"parallelogram_height_image.png");
 
 				SquareFirstSideEntry.Text = "";
 				SquareSecondSideEntry.Text = "";
@@ -220,7 +237,13 @@ namespace ExpandCalculator
 			else if (AreaShapePicker.SelectedIndex == 4)
 			{
 				ChangeAreaShapeCalculation(TrapezoidStackLayout);
-				ChangeTrapezoidAreaImages(AreaFirstImage, AreaSecondImage, AreaThirdImage, "trapezoid_base_a_image.png", "trapezoid_base_b_image.png", "trapezoid_height.png");
+				ChangeTrapezoidAreaImages(
+					AreaFirstImage,
+					AreaSecondImage,
+					AreaThirdImage,
+					"trapezoid_base_a_image.png",
+					"trapezoid_base_b_image.png",
+					"trapezoid_height.png");
 			}
 			else if (AreaShapePicker.SelectedIndex == 5)
 			{
@@ -230,13 +253,19 @@ namespace ExpandCalculator
 
 		private void SquareFirstSideEntry_OnFocused(object sender, FocusEventArgs e)
 		{
-			SwitchDiagramImages(AreaFirstImage, AreaSecondImage, AreaFirstImage);
+			SwitchDiagramImages(
+				AreaFirstImage,
+				AreaSecondImage,
+				AreaFirstImage);
 			HideAreaErrorLabel();
 		}
 
 		private void SquareSecondSideEntry_OnFocused(object sender, FocusEventArgs e)
 		{
-			SwitchDiagramImages(AreaFirstImage, AreaSecondImage, AreaSecondImage);
+			SwitchDiagramImages(
+				AreaFirstImage,
+				AreaSecondImage,
+				AreaSecondImage);
 			HideAreaErrorLabel();
 		}
 
@@ -269,48 +298,44 @@ namespace ExpandCalculator
 					}
 			}
 
-			if (AreaUnitsChipsGroup.SelectedItem == "Yards (yd)")
+			switch (AreaUnitsChipsGroup.SelectedItem)
 			{
-				SquareRectangleArea("yd");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Feet (ft)")
-			{
-				SquareRectangleArea("ft");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Inches (in)")
-			{
-				SquareRectangleArea("in");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Kilometers (km)")
-			{
-				SquareRectangleArea("km");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Meters (m)")
-			{
-				SquareRectangleArea("m");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Centimeters (cm)")
-			{
-				SquareRectangleArea("cm");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Millimeters (mm)")
-			{
-				SquareRectangleArea("mm");
+				case "Yards (yd)":
+					SquareRectangleArea(this, "yd");
+					break;
+				case "Feet (ft)":
+					SquareRectangleArea(this, "ft");
+					break;
+				case "Inches (in)":
+					SquareRectangleArea(this, "in");
+					break;
+				case "Kilometers (km)":
+					SquareRectangleArea(this, "km");
+					break;
+				case "Meters (m)":
+					SquareRectangleArea(this, "m");
+					break;
+				case "Centimeters (cm)":
+					SquareRectangleArea(this, "cm");
+					break;
+				case "Millimeters (mm)":
+					SquareRectangleArea(this, "mm");
+					break;
 			}
 
-			void SquareRectangleArea(string areaUnit)
+			static void SquareRectangleArea(MainPage @this, string areaUnit)
 			{
-				if (String.IsNullOrEmpty(SquareFirstSideEntry.Text) || String.IsNullOrEmpty(SquareSecondSideEntry.Text))
+				if (string.IsNullOrEmpty(@this.SquareFirstSideEntry.Text) || string.IsNullOrEmpty(@this.SquareSecondSideEntry.Text))
 				{
-					AreaErrorLabel.IsVisible = true;
+					@this.AreaErrorLabel.IsVisible = true;
 				}
 				else
 				{
-					HideAreaErrorLabel();
-					AreaResultLabel.IsVisible = true;
-					double squareFirstSideEntryDouble = double.Parse(SquareFirstSideEntry.Text);
-					double squareSecondSideEntryDouble = double.Parse(SquareSecondSideEntry.Text);
-					AreaResultLabel.Text = $"Area = {squareFirstSideEntryDouble * squareSecondSideEntryDouble} {areaUnit}\u00b2";
+					@this.HideAreaErrorLabel();
+					@this.AreaResultLabel.IsVisible = true;
+					double squareFirstSideEntryDouble = double.Parse(@this.SquareFirstSideEntry.Text);
+					double squareSecondSideEntryDouble = double.Parse(@this.SquareSecondSideEntry.Text);
+					@this.AreaResultLabel.Text = $"Area = {squareFirstSideEntryDouble * squareSecondSideEntryDouble} {areaUnit}\u00b2";
 				}
 			}
 		}
@@ -344,61 +369,63 @@ namespace ExpandCalculator
 					}
 			}
 
-			if (AreaUnitsChipsGroup.SelectedItem == "Yards (yd)")
+			switch (AreaUnitsChipsGroup.SelectedItem)
 			{
-				TriangleArea("yd");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Feet (ft)")
-			{
-				TriangleArea("ft");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Inches (in)")
-			{
-				TriangleArea("in");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Kilometers (km)")
-			{
-				TriangleArea("km");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Meters (m)")
-			{
-				TriangleArea("m");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Centimeters (cm)")
-			{
-				TriangleArea("cm");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Millimeters (mm)")
-			{
-				TriangleArea("mm");
+				case "Yards (yd)":
+					TriangleArea(this, "yd");
+					break;
+				case "Feet (ft)":
+					TriangleArea(this, "ft");
+					break;
+				case "Inches (in)":
+					TriangleArea(this, "in");
+					break;
+				case "Kilometers (km)":
+					TriangleArea(this, "km");
+					break;
+				case "Meters (m)":
+					TriangleArea(this, "m");
+					break;
+				case "Centimeters (cm)":
+					TriangleArea(this, "cm");
+					break;
+				case "Millimeters (mm)":
+					TriangleArea(this, "mm");
+					break;
 			}
 
-			void TriangleArea(string areaUnit)
+			static void TriangleArea(MainPage @this, string areaUnit)
 			{
-				if (String.IsNullOrEmpty(TriangleBaseEntry.Text) || String.IsNullOrEmpty(TriangleHeightEntry.Text))
+				if (string.IsNullOrEmpty(@this.TriangleBaseEntry.Text) || string.IsNullOrEmpty(@this.TriangleHeightEntry.Text))
 				{
-					AreaErrorLabel.IsVisible = true;
+					@this.AreaErrorLabel.IsVisible = true;
 				}
 				else
 				{
-					HideAreaErrorLabel();
-					AreaResultLabel.IsVisible = true;
-					double triangleBaseDouble = double.Parse(TriangleBaseEntry.Text);
-					double triangleHeightDouble = double.Parse(TriangleHeightEntry.Text);
-					AreaResultLabel.Text = $"Area = {triangleBaseDouble * triangleHeightDouble / 2} {areaUnit}\u00b2";
+					@this.HideAreaErrorLabel();
+					@this.AreaResultLabel.IsVisible = true;
+					double triangleBaseDouble = double.Parse(@this.TriangleBaseEntry.Text);
+					double triangleHeightDouble = double.Parse(@this.TriangleHeightEntry.Text);
+					@this.AreaResultLabel.Text = $"Area = {triangleBaseDouble * triangleHeightDouble / 2} {areaUnit}\u00b2";
 				}
 			}
 		}
 
 		private void TriangleBaseEntry_OnFocused(object sender, FocusEventArgs e)
 		{
-			SwitchDiagramImages(AreaFirstImage, AreaSecondImage, AreaFirstImage);
+			SwitchDiagramImages(
+				AreaFirstImage,
+				AreaSecondImage,
+				AreaFirstImage);
 			HideAreaErrorLabel();
 		}
 
 		private void TriangleHeightEntry_OnFocused(object sender, FocusEventArgs e)
 		{
-			SwitchDiagramImages(AreaFirstImage, AreaSecondImage, AreaSecondImage);
+			SwitchDiagramImages(
+				AreaFirstImage,
+				AreaSecondImage,
+				AreaSecondImage);
 			HideAreaErrorLabel();
 		}
 
@@ -442,75 +469,82 @@ namespace ExpandCalculator
 					}
 			}
 
-			if (AreaUnitsChipsGroup.SelectedItem == "Yards (yd)")
+			switch (AreaUnitsChipsGroup.SelectedItem)
 			{
-				TrapezoidArea("yd");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Feet (ft)")
-			{
-				TrapezoidArea("ft");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Inches (in)")
-			{
-				TrapezoidArea("in");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Kilometers (km)")
-			{
-				TrapezoidArea("km");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Meters (m)")
-			{
-				TrapezoidArea("m");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Centimeters (cm)")
-			{
-				TrapezoidArea("cm");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Millimeters (mm)")
-			{
-				TrapezoidArea("mm");
+				case "Yards (yd)":
+					TrapezoidArea(this, "yd");
+					break;
+				case "Feet (ft)":
+					TrapezoidArea(this, "ft");
+					break;
+				case "Inches (in)":
+					TrapezoidArea(this, "in");
+					break;
+				case "Kilometers (km)":
+					TrapezoidArea(this, "km");
+					break;
+				case "Meters (m)":
+					TrapezoidArea(this, "m");
+					break;
+				case "Centimeters (cm)":
+					TrapezoidArea(this, "cm");
+					break;
+				case "Millimeters (mm)":
+					TrapezoidArea(this, "mm");
+					break;
 			}
 
-			void TrapezoidArea(string areaUnit)
+			static void TrapezoidArea(MainPage @this, string areaUnit)
 			{
-				if (String.IsNullOrEmpty(TrapezoidFirstBaseEntry.Text) || String.IsNullOrEmpty(TrapezoidSecondBaseEntry.Text))
+				if (string.IsNullOrEmpty(@this.TrapezoidFirstBaseEntry.Text) || string.IsNullOrEmpty(@this.TrapezoidSecondBaseEntry.Text))
 				{
-					HideAreaImages();
-					AreaErrorLabel.IsVisible = true;
+					@this.HideAreaImages();
+					@this.AreaErrorLabel.IsVisible = true;
 				}
 				else
 				{
-					HideAreaErrorLabel();
-					AreaResultLabel.IsVisible = true;
+					@this.HideAreaErrorLabel();
+					@this.AreaResultLabel.IsVisible = true;
 
-					double trapezoidFirstBaseDouble = double.Parse(TrapezoidFirstBaseEntry.Text);
-					double trapezoidSecondBaseDouble = double.Parse(TrapezoidSecondBaseEntry.Text);
-					double trapezoidHeightDouble = double.Parse(TrapezoidHeightEntry.Text);
+					double trapezoidFirstBaseDouble = double.Parse(@this.TrapezoidFirstBaseEntry.Text);
+					double trapezoidSecondBaseDouble = double.Parse(@this.TrapezoidSecondBaseEntry.Text);
+					double trapezoidHeightDouble = double.Parse(@this.TrapezoidHeightEntry.Text);
 
 					double trapezoidBaseTotal = trapezoidFirstBaseDouble + trapezoidSecondBaseDouble;
 					double trapezoidBaseHalf = trapezoidBaseTotal / 2;
 					double trapezoidTotalArea = trapezoidBaseHalf * trapezoidHeightDouble;
-
-					AreaResultLabel.Text = $"Area = {trapezoidTotalArea} {areaUnit}\u00b2";
+					@this.AreaResultLabel.Text = $"Area = {trapezoidTotalArea} {areaUnit}\u00b2";
 				}
 			}
 		}
 
 		private void TrapezoidFirstBaseEntry_OnFocused(object sender, FocusEventArgs e)
 		{
-			SwitchTrapezoidDiagramImages(AreaFirstImage, AreaSecondImage, AreaThirdImage, AreaFirstImage);
+			SwitchTrapezoidDiagramImages(
+				AreaFirstImage,
+				AreaSecondImage,
+				AreaThirdImage,
+				AreaFirstImage);
 			HideAreaErrorLabel();
 		}
 
 		private void TrapezoidSecondBaseEntry_OnFocused(object sender, FocusEventArgs e)
 		{
-			SwitchTrapezoidDiagramImages(AreaFirstImage, AreaSecondImage, AreaThirdImage, AreaSecondImage);
+			SwitchTrapezoidDiagramImages(
+				AreaFirstImage,
+				AreaSecondImage,
+				AreaThirdImage,
+				AreaSecondImage);
 			HideAreaErrorLabel();
 		}
 
 		private void TrapezoidHeightEntry_OnFocused(object sender, FocusEventArgs e)
 		{
-			SwitchTrapezoidDiagramImages(AreaFirstImage, AreaSecondImage, AreaThirdImage, AreaThirdImage);
+			SwitchTrapezoidDiagramImages(
+				AreaFirstImage,
+				AreaSecondImage,
+				AreaThirdImage,
+				AreaThirdImage);
 			HideAreaErrorLabel();
 		}
 
@@ -568,57 +602,54 @@ namespace ExpandCalculator
 					}
 			}
 
-			if (AreaUnitsChipsGroup.SelectedItem == "Yards (yd)")
+			switch (AreaUnitsChipsGroup.SelectedItem)
 			{
-				CircleArea("yd");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Feet (ft)")
-			{
-				CircleArea("ft");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Inches (in)")
-			{
-				CircleArea("in");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Kilometers (km)")
-			{
-				CircleArea("km");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Meters (m)")
-			{
-				CircleArea("m");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Centimeters (cm)")
-			{
-				CircleArea("cm");
-			}
-			else if (AreaUnitsChipsGroup.SelectedItem == "Millimeters (mm)")
-			{
-				CircleArea("mm");
+				case "Yards (yd)":
+					CircleArea(this, "yd");
+					break;
+				case "Feet (ft)":
+					CircleArea(this, "ft");
+					break;
+				case "Inches (in)":
+					CircleArea(this, "in");
+					break;
+				case "Kilometers (km)":
+					CircleArea(this, "km");
+					break;
+				case "Meters (m)":
+					CircleArea(this, "m");
+					break;
+				case "Centimeters (cm)":
+					CircleArea(this, "cm");
+					break;
+				case "Millimeters (mm)":
+					CircleArea(this, "mm");
+					break;
 			}
 
-			void CircleArea(string areaUnit)
+			static void CircleArea(MainPage @this, string areaUnit)
 			{
-				if (String.IsNullOrEmpty(CircleRadiusDiameterEntry.Text))
+				if (string.IsNullOrEmpty(@this.CircleRadiusDiameterEntry.Text))
 				{
-					AreaResultLabel.IsVisible = false;
-					AreaErrorLabel.IsVisible = true;
+					@this.AreaResultLabel.IsVisible = false;
+					@this.AreaErrorLabel.IsVisible = true;
 				}
 				else
 				{
-					AreaResultLabel.IsVisible = true;
-					HideAreaErrorLabel();
+					@this.AreaResultLabel.IsVisible = true;
+					@this.HideAreaErrorLabel();
 
-					double circleMeasurement = double.Parse(CircleRadiusDiameterEntry.Text);
+					double circleMeasurement = double.Parse(@this.CircleRadiusDiameterEntry.Text);
 
-					if (RadiusDiameterSegmentedControl.SelectedSegment == 0)
+					switch (@this.RadiusDiameterSegmentedControl.SelectedSegment)
 					{
-						double radiusSquared = circleMeasurement * circleMeasurement;
-						AreaResultLabel.Text = $"Area = {radiusSquared * Math.PI} {areaUnit}\u00b2";
-					}
-					else if (RadiusDiameterSegmentedControl.SelectedSegment == 1)
-					{
-						AreaResultLabel.Text = $"Area = {circleMeasurement * Math.PI} {areaUnit}\u00b2";
+						case 0:
+							double radiusSquared = circleMeasurement * circleMeasurement;
+							@this.AreaResultLabel.Text = $"Area = {radiusSquared * Math.PI} {areaUnit}\u00b2";
+							break;
+						case 1:
+							@this.AreaResultLabel.Text = $"Area = {circleMeasurement * Math.PI} {areaUnit}\u00b2";
+							break;
 					}
 				}
 			}
@@ -636,44 +667,36 @@ namespace ExpandCalculator
 			switch (DateResultLabel.IsVisible)
 			{
 				case true:
-					{
-						break;
-					}
+					break;
 				case false:
-					{
-						DateResultLabel.IsVisible = true;
-						break;
-					}
+					DateResultLabel.IsVisible = true;
+					break;
 			}
 
-			if (FirstTimePickerCheckbox.IsChecked && SecondTimePickerCheckbox.IsChecked == false)
+			if (FirstTimePickerCheckbox.IsChecked && !SecondTimePickerCheckbox.IsChecked)
 			{
 				if ((DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time) > DateCalcSecondDatePicker.Date)
 				{
-					DateResultLabel.Text =
-						$"The difference is: {(DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time) - DateCalcSecondDatePicker.Date} {dateFormat}";
+					DateResultLabel.Text = $"The difference is: {DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time - DateCalcSecondDatePicker.Date} {dateFormat}";
 				}
 				else if ((DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time) < DateCalcSecondDatePicker.Date)
 				{
-					DateResultLabel.Text =
-						$"The difference is: {DateCalcSecondDatePicker.Date - (DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time)} {dateFormat}";
+					DateResultLabel.Text = $"The difference is: {DateCalcSecondDatePicker.Date - (DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time)} {dateFormat}";
 				}
 				else if ((DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time) == DateCalcSecondDatePicker.Date)
 				{
 					DateResultLabel.Text = "There is no difference";
 				}
 			}
-			else if (SecondTimePickerCheckbox.IsChecked && FirstTimePickerCheckbox.IsChecked == false)
+			else if (SecondTimePickerCheckbox.IsChecked && !FirstTimePickerCheckbox.IsChecked)
 			{
 				if (DateCalcFirstDatePicker.Date > (DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time))
 				{
-					DateResultLabel.Text =
-						$"The difference is: {DateCalcFirstDatePicker.Date - (DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time)} {dateFormat}";
+					DateResultLabel.Text = $"The difference is: {DateCalcFirstDatePicker.Date - (DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time)} {dateFormat}";
 				}
 				else if (DateCalcFirstDatePicker.Date < (DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time))
 				{
-					DateResultLabel.Text =
-						$"The difference is: {(DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time) - DateCalcFirstDatePicker.Date} {dateFormat}";
+					DateResultLabel.Text = $"The difference is: {DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time - DateCalcFirstDatePicker.Date} {dateFormat}";
 				}
 				else if (DateCalcFirstDatePicker.Date == (DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time))
 				{
@@ -684,30 +707,26 @@ namespace ExpandCalculator
 			{
 				if ((DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time) > (DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time))
 				{
-					DateResultLabel.Text =
-						$"The difference is: {(DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time) - (DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time)} {dateFormat}";
+					DateResultLabel.Text = $"The difference is: {DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time - (DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time)} {dateFormat}";
 				}
 				else if ((DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time) < (DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time))
 				{
-					DateResultLabel.Text =
-						$"The difference is: {(DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time) - (DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time)} {dateFormat}";
+					DateResultLabel.Text = $"The difference is: {DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time - (DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time)} {dateFormat}";
 				}
 				else if ((DateCalcFirstDatePicker.Date + FirstDatePickerTime.Time) == (DateCalcSecondDatePicker.Date + SecondDatePickerTime.Time))
 				{
 					DateResultLabel.Text = "There is no difference";
 				}
 			}
-			else if (FirstTimePickerCheckbox.IsChecked == false && SecondTimePickerCheckbox.IsChecked == false)
+			else if (!FirstTimePickerCheckbox.IsChecked && SecondTimePickerCheckbox.IsChecked == false)
 			{
 				if (DateCalcFirstDatePicker.Date > DateCalcSecondDatePicker.Date)
 				{
-					DateResultLabel.Text =
-						$"The difference is: {DateCalcFirstDatePicker.Date - DateCalcSecondDatePicker.Date} {dateFormat}";
+					DateResultLabel.Text = $"The difference is: {DateCalcFirstDatePicker.Date - DateCalcSecondDatePicker.Date} {dateFormat}";
 				}
 				else if (DateCalcFirstDatePicker.Date < DateCalcSecondDatePicker.Date)
 				{
-					DateResultLabel.Text =
-						$"The difference is: {DateCalcSecondDatePicker.Date - DateCalcFirstDatePicker.Date} {dateFormat}";
+					DateResultLabel.Text = $"The difference is: {DateCalcSecondDatePicker.Date - DateCalcFirstDatePicker.Date} {dateFormat}";
 				}
 				else if (DateCalcFirstDatePicker.Date == DateCalcSecondDatePicker.Date)
 				{
@@ -721,15 +740,11 @@ namespace ExpandCalculator
 			switch (FirstTimePickerCheckbox.IsChecked)
 			{
 				case true:
-					{
-						ViewTimePickersForDateCalc(FirstDatePickerTime, true);
-						break;
-					}
+					ViewTimePickersForDateCalc(FirstDatePickerTime, true);
+					break;
 				case false:
-					{
-						ViewTimePickersForDateCalc(FirstDatePickerTime, false);
-						break;
-					}
+					ViewTimePickersForDateCalc(FirstDatePickerTime, false);
+					break;
 			}
 		}
 
@@ -738,30 +753,29 @@ namespace ExpandCalculator
 			switch (SecondTimePickerCheckbox.IsChecked)
 			{
 				case true:
-					{
-						ViewTimePickersForDateCalc(SecondDatePickerTime, true);
-						break;
-					}
+					ViewTimePickersForDateCalc(SecondDatePickerTime, true);
+					break;
 				case false:
-					{
-						ViewTimePickersForDateCalc(SecondDatePickerTime, false);
-						break;
-					}
+					ViewTimePickersForDateCalc(SecondDatePickerTime, false);
+					break;
 			}
 		}
 
 		// About page event handlers
 		private async void ExpandUpdateButton_OnClicked(object sender, EventArgs e)
 		{
-			if (Connectivity.NetworkAccess == NetworkAccess.Internet)
+			switch (Connectivity.NetworkAccess)
 			{
-				string url = ExpandUpdateButton.ClassId;
-				await Browser.OpenAsync(url);
-			}
-			else
-			{
-				await DisplayAlert("No Internet",
-					"Sorry, but currently you do not have internet access. Please try again later.", "Ok");
+				case NetworkAccess.Internet:
+					string url = ExpandUpdateButton.ClassId;
+					await Browser.OpenAsync(url);
+					break;
+				default:
+					await DisplayAlert(
+						"No Internet",
+						"Sorry, but currently you do not have internet access. Please try again later.",
+						"Ok");
+					break;
 			}
 		}
 
@@ -774,13 +788,21 @@ namespace ExpandCalculator
 				Preferences.Remove("holiday_mode_activated");
 				Preferences.Set("dark_mode_activated", true);
 				HolidayModeSantaHat.IsVisible = false;
-				EnableDarkMode("#262626", "#434343", "#555555", "#979797");
+				EnableDarkMode(
+					"#262626",
+					"#434343",
+					"#555555",
+					"#979797");
 			}
 			else
 			{
 				Preferences.Remove("dark_mode_activated");
 				HolidayModeSantaHat.IsVisible = false;
-				DisableDarkMode("#005395", "#0173b7", "#27b1f1", "#4dbef3");
+				DisableDarkMode(
+					"#005395",
+					"#0173b7",
+					"#27b1f1",
+					"#4dbef3");
 			}
 		}
 
@@ -792,19 +814,30 @@ namespace ExpandCalculator
 				Preferences.Remove("dark_mode_activated");
 				Preferences.Set("holiday_mode_activated", true);
 				HolidayModeSantaHat.IsVisible = true;
-				EnableDarkMode("#ff001e", "#00c000", "#00d400", "#00ff00");
+				EnableDarkMode(
+					"#ff001e",
+					"#00c000",
+					"#00d400",
+					"#00ff00");
 			}
 			else
 			{
 				Preferences.Remove("holiday_mode_activated");
 				HolidayModeSantaHat.IsVisible = false;
-				DisableDarkMode("#005395", "#0173b7", "#27b1f1", "#4dbef3");
+				DisableDarkMode(
+					"#005395",
+					"#0173b7",
+					"#27b1f1",
+					"#4dbef3");
 			}
 		}
 
 		private void ClearAllPreferencesButton_OnClicked(object sender, EventArgs e)
 		{
-			DisplayAlert("Clear All Preferences", "All the app's preferences have now been cleared.", "Ok");
+			DisplayAlert(
+				"Clear All Preferences",
+				"All the app's preferences have now been cleared.",
+				"Ok");
 			Preferences.Clear();
 		}
 
@@ -814,7 +847,10 @@ namespace ExpandCalculator
 
 		private void DisplayComingSoonAlert()
 		{
-			DisplayAlert("Coming Soon", "This feature is not done yet", "Ok");
+			DisplayAlert(
+				"Coming Soon",
+				"This feature is not done yet",
+				"Ok");
 		}
 
 		private void ViewTimePickersForDateCalc(MaterialTimePicker timePicker, bool visibility)
@@ -830,20 +866,33 @@ namespace ExpandCalculator
 			}
 		}
 
-		private void ChangeAreaImages(Image firstImage, Image secondImage, string firstImgSource, string secondImgSource)
+		private void ChangeAreaImages(
+			Image firstImage,
+			Image secondImage,
+			string firstImgSource,
+			string secondImgSource)
 		{
 			firstImage.Source = firstImgSource;
 			secondImage.Source = secondImgSource;
 		}
 
-		private void ChangeTrapezoidAreaImages(Image firstImage, Image secondImage, Image thirdImage, string firstImgSource, string secondImgSource, string thirdImgSource)
+		private void ChangeTrapezoidAreaImages(
+			Image firstImage,
+			Image secondImage,
+			Image thirdImage,
+			string firstImgSource,
+			string secondImgSource,
+			string thirdImgSource)
 		{
 			firstImage.Source = firstImgSource;
 			secondImage.Source = secondImgSource;
 			thirdImage.Source = thirdImgSource;
 		}
 
-		private void SwitchDiagramImages(Image firstDiagram, Image secondDiagram, Image showingDiagram)
+		private void SwitchDiagramImages(
+			Image firstDiagram,
+			Image secondDiagram,
+			Image showingDiagram)
 		{
 			AreaResultLabel.IsVisible = false;
 			// Allows you to change the informational
@@ -861,7 +910,11 @@ namespace ExpandCalculator
 			AreaThirdImage.IsVisible = false;
 		}
 
-		private void SwitchTrapezoidDiagramImages(Image firstDiagram, Image secondDiagram, Image thirdDiagram, Image showingDiagram)
+		private void SwitchTrapezoidDiagramImages(
+			Image firstDiagram,
+			Image secondDiagram,
+			Image thirdDiagram,
+			Image showingDiagram)
 		{
 			AreaResultLabel.IsVisible = false;
 			// Allows you to change the informational
@@ -960,7 +1013,11 @@ namespace ExpandCalculator
 			}
 		}
 
-		private void EnableDarkMode(string darkBackgroundAccent, string darkAccent2, string darkAccent3, string darkAccent4)
+		private void EnableDarkMode(
+			string darkBackgroundAccent,
+			string darkAccent2,
+			string darkAccent3,
+			string darkAccent4)
 		{
 			_navigationClickedHex = darkAccent3;
 			_navigationUnclickedHex = darkBackgroundAccent;
@@ -1037,23 +1094,23 @@ namespace ExpandCalculator
 			switch (NewFeatureIntroScrollView.IsVisible || NewFeatureStackViewChild.IsVisible)
 			{
 				case true:
-					{
-						AboutImageButton.SendClicked();
-						HomeImageButton.SendClicked();
-						WelcomeScrollView.IsVisible = false;
-						WelcomeStackLayout.IsVisible = false;
-						break;
-					}
+					AboutImageButton.SendClicked();
+					HomeImageButton.SendClicked();
+					WelcomeScrollView.IsVisible = false;
+					WelcomeStackLayout.IsVisible = false;
+					break;
 				case false:
-					{
-						AboutImageButton.SendClicked();
-						SettingsImageButton.SendClicked();
-						break;
-					}
+					AboutImageButton.SendClicked();
+					SettingsImageButton.SendClicked();
+					break;
 			}
 		}
 
-		private void DisableDarkMode(string lightAccent1, string lightAccent2, string lightAccent3, string lightAccent4)
+		private void DisableDarkMode(
+			string lightAccent1,
+			string lightAccent2,
+			string lightAccent3,
+			string lightAccent4)
 		{
 			_navigationClickedHex = "#005395";
 			_navigationUnclickedHex = "#0297df";
