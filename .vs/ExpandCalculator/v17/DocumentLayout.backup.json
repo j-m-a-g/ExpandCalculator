@@ -1,12 +1,52 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EE91D2C8-97F8-4C77-89F9-8E35D825CBC4}|ExpandCalculator.Android\\ExpandCalculator.Android.csproj|c:\\users\\joseph\\xamarinreleaseprojects\\expandcalculator\\expandcalculator.android\\properties\\androidmanifest.xml||{4E01A4BC-CFCF-452C-8C08-51352512D197}",
+      "RelativeMoniker": "D:0:0:{EE91D2C8-97F8-4C77-89F9-8E35D825CBC4}|ExpandCalculator.Android\\ExpandCalculator.Android.csproj|solutionrelative:expandcalculator.android\\properties\\androidmanifest.xml||{4E01A4BC-CFCF-452C-8C08-51352512D197}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53393E59-5F89-48BB-8DE7-824B286D72F3}|ExpandCalculator\\ExpandCalculator.csproj|c:\\users\\joseph\\xamarinreleaseprojects\\expandcalculator\\expandcalculator\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53393E59-5F89-48BB-8DE7-824B286D72F3}|ExpandCalculator\\ExpandCalculator.csproj|solutionrelative:expandcalculator\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\ExpandCalculator\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "ExpandCalculator\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\ExpandCalculator\\MainPage.xaml.cs",
+              "RelativeToolTip": "ExpandCalculator\\MainPage.xaml.cs",
+              "ViewState": "AgIAAJoEAAAAAAAAAADgv5wEAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T02:07:31.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AndroidManifest.xml",
+              "DocumentMoniker": "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\ExpandCalculator.Android\\Properties\\AndroidManifest.xml",
+              "RelativeDocumentMoniker": "ExpandCalculator.Android\\Properties\\AndroidManifest.xml",
+              "ToolTip": "C:\\Users\\Joseph\\XamarinReleaseProjects\\ExpandCalculator\\ExpandCalculator.Android\\Properties\\AndroidManifest.xml",
+              "RelativeToolTip": "ExpandCalculator.Android\\Properties\\AndroidManifest.xml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-11-20T02:21:26.23Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
